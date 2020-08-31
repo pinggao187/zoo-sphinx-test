@@ -1,520 +1,311 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html class="writer-html4" lang="en" >
 <head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to analytics-zoo’s documentation! &mdash; analytics-zoo  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
   
   
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="None">
-    
-    
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Analytics Zoo</title>
-    <link href="/css/bootstrap-3.3.7.min.css" rel="stylesheet">
-    <link href="/css/font-awesome-4.7.0.css" rel="stylesheet">
-    <link href="/css/base.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/highlight.css">
-    <link href="./extra.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+  
+  
 
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/bootstrap-3.3.7.min.js"></script>
-    <script src="/js/highlight.pack.js"></script>
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
     
-      <script src="/js/elasticlunr.min.js"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
-    <base target="_top">
-    <script>
-      var base_url = '.';
-      var is_top_frame = (window === window.parent);
-        
-        var pageToc = [
-          {title: "What is Analytics Zoo?", url: "#what-is-analytics-zoo", children: [
-          ]},
-          {title: "Why use Analytics Zoo?", url: "#why-use-analytics-zoo", children: [
-          ]},
-          {title: "How to use Analytics Zoo?", url: "#how-to-use-analytics-zoo", children: [
-          ]},
-        ];
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-    </script>
-    <script src="/js/base.js"></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-125166209-1', 'analytics-zoo.github.io');
-        ga('send', 'pageview');
-    </script> 
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="conf module" href="conf.html" /> 
 </head>
 
-<body>
-<script>
-if (is_top_frame) { $('body').addClass('wm-top-page'); }
-</script>
+<body class="wy-body-for-nav">
 
-<nav class="navbar wm-page-top-frame">
-  <div class="container-fluid wm-top-container">
+   
+  <div class="wy-grid-for-nav">
     
-    <div class="wm-top-tool pull-right wm-vcenter">
-      <form class="dropdown wm-vcentered" id="wm-search-form" action="./search.html">
-        
-        <button id="wm-search-show" class="btn btn-sm btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>                                                                           
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
 
-        <div class="input-group input-group-sm wm-top-search">
-          <input type="text" name="q" class="form-control" id="mkdocs-search-query" placeholder="Search">
-          <span class="input-group-btn" role="search">
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> analytics-zoo
+          
+
+          
+          </a>
+
+          
             
-            <button class="btn btn-default dropdown-toggle collapse" data-toggle="dropdown" type="button"><span class="caret"></span></button>
-            <ul id="mkdocs-search-results" class="dropdown-menu dropdown-menu-right"></ul>
-            <button id="wm-search-go" class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-          </span>
-        </div>
-      </form>
-    </div>
+            
+          
 
-    
-    <div class="wm-top-tool wm-vcenter pull-right wm-small-left">
-      <button id="wm-toc-button" type="button" class="btn btn-sm btn-default wm-vcentered"><i class="fa fa-th-list" aria-hidden="true"></i></button>
-    </div>
-
-    
-    
-    
-
-    
-    <div>
-      <div class="wm-top-title">
-        <a href="" class="wm-top-brand wm-top-link wm-vcenter ">
-            <!--img class="wm-top-logo" src="/img/bigdl_logo.png"/-->
-	    <span tilte="name">Analytics-Zoo</span>
-        </a>
-      </div>
-      
-      <div class="wm-top-title">
-          <select id="versions" class="wm-top-link wm-top-more wm-top-version-select" onchange="javascript:switchVersion(this)">
-          </select>
-      </div>
-      
-    </div>
-  </div>
-</nav>
-
-  <div id="main-content" class="wm-page-top-frame">
-    
-<nav class="wm-toc-pane">
-  
-    <ul class="wm-toctree wm-toc-repo">
-      <li class="wm-toc-li wm-toc-lev1">
-      <a class="wm-article-link wm-toc-text wm-toc-repolink" href="https://github.com/intel-analytics/analytics-zoo">
-        <img class="wm-top-logo" src="/img/github.ico"/>
-        Fork on GitHub 
-      </a>
-      </li>
-    </ul>
-  <ul class="wm-toctree">
-        <li class="wm-toc-li wm-toc-lev1 "><a href="." class="wm-article-link wm-toc-text">Overview</a>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 "><a href="gettingstarted/" class="wm-article-link wm-toc-text">Getting Started</a>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Releases</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="release-download/" class="wm-article-link wm-toc-text">Download</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="release-docs/" class="wm-article-link wm-toc-text">Documentation</a>
-</li>
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">User Guide</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="DockerUserGuide/" class="wm-article-link wm-toc-text">Docker User Guide</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Python</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="PythonUserGuide/install/" class="wm-article-link wm-toc-text">Install</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="PythonUserGuide/run/" class="wm-article-link wm-toc-text">Run</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="DeveloperGuide/python/" class="wm-article-link wm-toc-text">Develop</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="PythonUserGuide/python-lib-version/" class="wm-article-link wm-toc-text">Library version</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="PythonUserGuide/python-faq/" class="wm-article-link wm-toc-text">FAQ</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Scala</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ScalaUserGuide/install/" class="wm-article-link wm-toc-text">Install</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ScalaUserGuide/run/" class="wm-article-link wm-toc-text">Run</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev2 "><a href="examples/" class="wm-article-link wm-toc-text">Examples</a>
-</li>
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Programming Guide</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Pipeline APIs</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/nnframes/" class="wm-article-link wm-toc-text">DataFrame and ML Pipeline</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/autograd/" class="wm-article-link wm-toc-text">Autograd</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/transferlearning/" class="wm-article-link wm-toc-text">Transfer Learning</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/inference/" class="wm-article-link wm-toc-text">Model Serving</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">TFPark</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/TFPark/tensorflow/" class="wm-article-link wm-toc-text">TFPark Overview</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/TFPark/how-to-import-data/" class="wm-article-link wm-toc-text">How To Import Data</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/TFPark/text-models/" class="wm-article-link wm-toc-text">Text Models</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/TFPark/bert-classifier/" class="wm-article-link wm-toc-text">BERT Classifier</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev2 "><a href="ProgrammingGuide/pytorch/" class="wm-article-link wm-toc-text">PyTorch</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="ProgrammingGuide/rayonspark/" class="wm-article-link wm-toc-text">RayOnSpark</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="ClusterServingGuide/ProgrammingGuide/" class="wm-article-link wm-toc-text">Cluster Serving</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">AutoML</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/AutoML/overview/" class="wm-article-link wm-toc-text">Overview</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/AutoML/forecasting/" class="wm-article-link wm-toc-text">Time Series Forecasting</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Feature Engineering</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/workingwithimages/" class="wm-article-link wm-toc-text">Working with Images</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/workingwithtexts/" class="wm-article-link wm-toc-text">Working with Texts</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Built-in Models</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/object-detection/" class="wm-article-link wm-toc-text">Object Detection API</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/image-classification/" class="wm-article-link wm-toc-text">Image Classification API</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/text-classification/" class="wm-article-link wm-toc-text">Text Classification API</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/recommendation/" class="wm-article-link wm-toc-text">Recommendation API</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/anomaly-detection/" class="wm-article-link wm-toc-text">Anomaly Detection API</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/text-matching/" class="wm-article-link wm-toc-text">Text Matching API</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="ProgrammingGuide/seq2seq/" class="wm-article-link wm-toc-text">Sequence to Sequence API</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev2 "><a href="ProgrammingGuide/visualization/" class="wm-article-link wm-toc-text">Visualization</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="ProgrammingGuide/usercases-overview/" class="wm-article-link wm-toc-text">Reference Use Cases</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="ProgrammingGuide/run-on-dataproc/" class="wm-article-link wm-toc-text">Run on Google Cloud Dataproc</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="ProgrammingGuide/run-notebook-colab/" class="wm-article-link wm-toc-text">Run on Google Colab</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="ProgrammingGuide/AnalyticsZoo-on-Databricks/" class="wm-article-link wm-toc-text">Run on Databricks</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="ProgrammingGuide/k8s/" class="wm-article-link wm-toc-text">Run on Kubernetes cluster</a>
-</li>
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">White Paper</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="wp-bigdl/" class="wm-article-link wm-toc-text">BigDL</a>
-</li>
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">API Guide</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Pythons</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="APIGuide/python-api-doc/" class="wm-article-link wm-toc-text">Python API</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Scala</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="APIGuide/scaladoc/" class="wm-article-link wm-toc-text">Scala API</a>
-</li>
-  </ul>
-</li>
-
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Keras-Style API Guide</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="KerasStyleAPIGuide/keras-api-python/" class="wm-article-link wm-toc-text">Python Guide</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="KerasStyleAPIGuide/keras-api-scala/" class="wm-article-link wm-toc-text">Scala Guide</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Layers</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/activation/" class="wm-article-link wm-toc-text">Activation</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/initialization/" class="wm-article-link wm-toc-text">Initialization</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/core/" class="wm-article-link wm-toc-text">Core Layers</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/convolutional/" class="wm-article-link wm-toc-text">Convolutional Layers</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/pooling/" class="wm-article-link wm-toc-text">Pooling Layers</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/recurrent/" class="wm-article-link wm-toc-text">Recurrent Layers</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/normalization/" class="wm-article-link wm-toc-text">Normalization Layers</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/embedding/" class="wm-article-link wm-toc-text">Embedding Layers</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/dropout/" class="wm-article-link wm-toc-text">Dropout Layers</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/advanced-activation/" class="wm-article-link wm-toc-text">Advanced Activations</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/wrappers/" class="wm-article-link wm-toc-text">Layer Wrappers</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Layers/self-attention/" class="wm-article-link wm-toc-text">Self Attention Layers</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Optimization</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Optimization/training/" class="wm-article-link wm-toc-text">Train, evaluate or predict a model</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Optimization/optimizers/" class="wm-article-link wm-toc-text">Optimizers</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="KerasStyleAPIGuide/Optimization/objectives/" class="wm-article-link wm-toc-text">Objectives</a>
-</li>
-  </ul>
-</li>
-
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Project Zouwu</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="Zouwu/overview/" class="wm-article-link wm-toc-text">Overview</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Reference Use Cases</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="Zouwu/UseCase/network-traffic/" class="wm-article-link wm-toc-text">Network Traffic</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev2 "><a href="Zouwu/tutorial/" class="wm-article-link wm-toc-text">Tutorial</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Algorithms</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 "><a href="Zouwu/Algorithm/MTNetAlgorithm/" class="wm-article-link wm-toc-text">MTNet</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev3 "><a href="Zouwu/Algorithm/LSTMAlgorithm/" class="wm-article-link wm-toc-text">LSTM</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">API</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev3 wm-toc-opener"><span class="wm-toc-text">Built-in Models</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev4 "><a href="Zouwu/API/LSTMForecaster/" class="wm-article-link wm-toc-text">LSTMForecaster</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev4 "><a href="Zouwu/API/MTNetForecaster/" class="wm-article-link wm-toc-text">MTNetForecaster</a>
-</li>
-  </ul>
-</li>
-
-      <li class="wm-toc-li wm-toc-lev3 wm-toc-opener"><span class="wm-toc-text">AutoTS</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev4 "><a href="Zouwu/API/AutoTSTrainer/" class="wm-article-link wm-toc-text">AutoTSTrainer</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev4 "><a href="Zouwu/API/TSPipeline/" class="wm-article-link wm-toc-text">TSPipeline</a>
-</li>
-  </ul>
-</li>
-
-  </ul>
-</li>
-
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Project Orca</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="Orca/overview/" class="wm-article-link wm-toc-text">Overview</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="Orca/context/" class="wm-article-link wm-toc-text">OrcaContext</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="Orca/data/" class="wm-article-link wm-toc-text">Data</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="Orca/orca-pytorch-estimator/" class="wm-article-link wm-toc-text">Orca PyTorch Estimator</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="Orca/orca-tf-estimator/" class="wm-article-link wm-toc-text">Orca Tensorflow Estimator</a>
-</li>
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 "><a href="powered-by/" class="wm-article-link wm-toc-text">Powered by</a>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 "><a href="presentations/" class="wm-article-link wm-toc-text">Presentations</a>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 "><a href="meetup/" class="wm-article-link wm-toc-text">Meetup & Webinar</a>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 "><a href="known-issues/" class="wm-article-link wm-toc-text">FAQ and Known Issues</a>
-</li>
-  </ul>
-</nav>
-
-    <div class="wm-content-pane">
-      <iframe class="wm-article" name="article"></iframe>
-    </div>
-  </div>
-
-<div class="container-fluid wm-page-content">
-    
-    <h1><strong>Overview</strong></h1>
-    <hr>
-    <p><img alt="logo" src="./Image/logo_s.jpg" /> </p>
-<p><em>A unified Data Analytics and AI platform for <strong>distributed TensorFlow, Keras and PyTorch on Apache Spark/Flink &amp; Ray</strong></em></p>
-<hr />
-<h1 id="what-is-analytics-zoo"><font size="6"><b>What is Analytics Zoo?</b></font></h1>
-<p>Analytics Zoo seamless scales TensorFlow, Keras and PyTorch to distributed big data (using Spark, Flink &amp; Ray).</p>
-<p><img alt="blockdiagram" src="./Image/blockdiagram.jpg" /> </p>
-<ul>
-<li>
-<p><strong>End-to-end pipeline for applying AI models (TensorFlow, PyTorch, OpenVINO, etc.) to distributed big data</strong> </p>
-<ul>
-<li>Write <a href="ProgrammingGuide/TFPark/tensorflow/">TensorFlow</a> or <a href="ProgrammingGuide/pytorch/">PyTorch</a> inline with Spark code for distributed training and inference.</li>
-<li>Native deep learning (TensorFlow/Keras/PyTorch/BigDL) support in <a href="ProgrammingGuide/nnframes/">Spark ML</a> Pipelines.</li>
-<li>Directly run <a href="ProgrammingGuide/rayonspark/">Ray</a> programs on big data cluster through <em>RayOnSpark</em>. </li>
-<li>Plain Java/Python APIs for (TensorFlow/PyTorch/BigDL/OpenVINO) <a href="ProgrammingGuide/inference/">Model Inference</a>. </li>
-</ul>
-</li>
-<li>
-<p><strong>High-level ML workflow for automating machine learning tasks</strong></p>
-</li>
-<li><a href="ClusterServingGuide/ProgrammingGuide/">Cluster Serving</a> for automatically distributed (TensorFlow/PyTorch/Caffe/OpenVINO) model inference . </li>
-<li>
-<p>Scalable <a href="ProgrammingGuide/AutoML/overview/">AutoML</a> for time series prediction.</p>
-</li>
-<li>
-<p><strong>Built-in models</strong> for <a href="APIGuide/Models/recommendation.md">Recommendation</a>, <a href="APIGuide/Models/anomaly-detection.md">Time Series</a>, <a href="APIGuide/Models/object-detection.md">Computer Vision</a> and <a href="APIGuide/Models/text-matching.md">NLP</a> applications.</p>
-</li>
-</ul>
-<hr />
-<h1 id="why-use-analytics-zoo"><font size="6"><b>Why use Analytics Zoo?</b></font></h1>
-<p>You may want to develop your AI solutions using Analytics Zoo if:</p>
-<ul>
-<li>You want to easily apply AI models (e.g., TensorFlow, Keras, PyTorch, BigDL, OpenVINO, etc.) to distributed big data.</li>
-<li>You want to transparently scale your AI applications from a single laptop to large clusters with "zero" code changes.</li>
-<li>You want to deploy your AI pipelines to existing YARN or K8S clusters <em>WITHOUT</em> any modifications to the clusters.</li>
-<li>You want to automate the process of applying machine learning (such as feature engineering, hyperparameter tuning, model selection, distributed inference, etc.). </li>
-</ul>
-<hr />
-<h1 id="how-to-use-analytics-zoo"><font size="6"><b>How to use Analytics Zoo?</b></font></h1>
-<ul>
-<li>Check out the <a href="gettingstarted/">Getting Started page</a> for a quick overview of how to use Analytics Zoo.</li>
-<li>Refer to the <a href="PythonUserGuide/install/">Python</a>, <a href="ScalaUserGuide/install/">Scala</a> and <a href="DockerUserGuide/">Docker</a> guides to install Analytics Zoo.</li>
-<li>Visit the <a href="https://analytics-zoo.github.io/">Document Website</a> (<a href="https://analytics-zoo.gitee.io/">mirror</a> in China) for more information on Analytics Zoo.</li>
-<li>Check the <a href="https://analytics-zoo.github.io/master/#powered-by/">Powered By</a> &amp; <a href="https://analytics-zoo.github.io/master/#presentations/">Presentations</a> pages for real-world applications using Analytics Zoo.</li>
-<li>Join the <a href="https://groups.google.com/forum/#!forum/bigdl-user-group">Google Group</a> (or subscribe to the <a href="mailto:bigdl-user-group+subscribe@googlegroups.com">Mail List</a>) for more questions and discussions on Analytics Zoo.</li>
-</ul>
-
-  <br>
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
 </div>
 
-<footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="conf.html">conf module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zoo.html">zoo package</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">analytics-zoo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Welcome to analytics-zoo’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-analytics-zoo-s-documentation">
+<h1>Welcome to analytics-zoo’s documentation!<a class="headerlink" href="#welcome-to-analytics-zoo-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="conf.html">conf module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zoo.html">zoo package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zoo.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="zoo.automl.html">zoo.automl package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zoo.automl.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.automl.html#module-zoo.automl">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.common.html">zoo.common package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zoo.common.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.common.html#module-zoo.common.nncontext">zoo.common.nncontext module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.common.html#module-zoo.common.utils">zoo.common.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.common.html#module-zoo.common">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.examples.html">zoo.examples package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zoo.examples.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.examples.html#module-zoo.examples">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.feature.html">zoo.feature package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zoo.feature.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.feature.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.feature.html#module-zoo.feature.common">zoo.feature.common module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.feature.html#module-zoo.feature">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.models.html">zoo.models package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zoo.models.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.models.html#module-zoo.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.orca.html">zoo.orca package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zoo.orca.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.orca.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.orca.html#module-zoo.orca.common">zoo.orca.common module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.orca.html#module-zoo.orca">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.pipeline.html">zoo.pipeline package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zoo.pipeline.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.pipeline.html#module-zoo.pipeline">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.ray.html">zoo.ray package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zoo.ray.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.ray.html#zoo-ray-process-module">zoo.ray.process module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.ray.html#zoo-ray-raycontext-module">zoo.ray.raycontext module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.ray.html#zoo-ray-utils-module">zoo.ray.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.ray.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.tfpark.html">zoo.tfpark package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.estimator">zoo.tfpark.estimator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.model">zoo.tfpark.model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.tf_dataset">zoo.tfpark.tf_dataset module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.tf_optimizer">zoo.tfpark.tf_optimizer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.tf_predictor">zoo.tfpark.tf_predictor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.tfnet">zoo.tfpark.tfnet module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.utils">zoo.tfpark.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.zoo_optimizer">zoo.tfpark.zoo_optimizer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.util.html">zoo.util package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zoo.util.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.util.html#module-zoo.util.engine">zoo.util.engine module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.util.html#module-zoo.util.nest">zoo.util.nest module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.util.html#module-zoo.util.spark">zoo.util.spark module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.util.html#module-zoo.util.tf">zoo.util.tf module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.util.html#module-zoo.util.tf_graph_util">zoo.util.tf_graph_util module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.util.html#module-zoo.util.utils">zoo.util.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.util.html#module-zoo.util">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.zouwu.html">zoo.zouwu package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zoo.zouwu.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.zouwu.html#module-zoo.zouwu">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="zoo.html#module-zoo">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="conf.html" class="btn btn-neutral float-right" title="conf module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
 </footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
-<!--
-MkDocs version : 0.16.3
-Build Date UTC : 2020-08-30 08:19:55
--->

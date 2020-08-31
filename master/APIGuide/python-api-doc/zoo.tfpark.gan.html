@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>zoo.tfpark.gan package &mdash; analytics-zoo  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="zoo.tfpark.text package" href="zoo.tfpark.text.html" />
+    <link rel="prev" title="zoo.tfpark package" href="zoo.tfpark.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> analytics-zoo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="conf.html">conf module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="zoo.html">zoo package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="zoo.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="zoo.automl.html">zoo.automl package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.common.html">zoo.common package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.examples.html">zoo.examples package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.feature.html">zoo.feature package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.models.html">zoo.models package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.orca.html">zoo.orca package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.pipeline.html">zoo.pipeline package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.ray.html">zoo.ray package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="zoo.tfpark.html">zoo.tfpark package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="zoo.tfpark.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.estimator">zoo.tfpark.estimator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.model">zoo.tfpark.model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.tf_dataset">zoo.tfpark.tf_dataset module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.tf_optimizer">zoo.tfpark.tf_optimizer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.tf_predictor">zoo.tfpark.tf_predictor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.tfnet">zoo.tfpark.tfnet module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.utils">zoo.tfpark.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark.zoo_optimizer">zoo.tfpark.zoo_optimizer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zoo.tfpark.html#module-zoo.tfpark">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.util.html">zoo.util package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zoo.zouwu.html">zoo.zouwu package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="zoo.html#module-zoo">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">analytics-zoo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="zoo.html">zoo package</a> &raquo;</li>
+        
+          <li><a href="zoo.tfpark.html">zoo.tfpark package</a> &raquo;</li>
+        
+      <li>zoo.tfpark.gan package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/zoo.tfpark.gan.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="zoo-tfpark-gan-package">
+<h1>zoo.tfpark.gan package<a class="headerlink" href="#zoo-tfpark-gan-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-zoo.tfpark.gan.common">
+<span id="zoo-tfpark-gan-common-module"></span><h2>zoo.tfpark.gan.common module<a class="headerlink" href="#module-zoo.tfpark.gan.common" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="zoo.tfpark.gan.common.GanOptimMethod">
+<em class="property">class </em><code class="descclassname">zoo.tfpark.gan.common.</code><code class="descname">GanOptimMethod</code><span class="sig-paren">(</span><em>d_optim</em>, <em>g_optim</em>, <em>g_param_size</em>, <em>d_steps=1</em>, <em>g_steps=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/zoo/tfpark/gan/common.html#GanOptimMethod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zoo.tfpark.gan.common.GanOptimMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">bigdl.optim.optimizer.OptimMethod</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-zoo.tfpark.gan.gan_estimator">
+<span id="zoo-tfpark-gan-gan-estimator-module"></span><h2>zoo.tfpark.gan.gan_estimator module<a class="headerlink" href="#module-zoo.tfpark.gan.gan_estimator" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="zoo.tfpark.gan.gan_estimator.GANEstimator">
+<em class="property">class </em><code class="descclassname">zoo.tfpark.gan.gan_estimator.</code><code class="descname">GANEstimator</code><span class="sig-paren">(</span><em>generator_fn</em>, <em>discriminator_fn</em>, <em>generator_loss_fn</em>, <em>discriminator_loss_fn</em>, <em>generator_optimizer</em>, <em>discriminator_optimizer</em>, <em>generator_steps=1</em>, <em>discriminator_steps=1</em>, <em>model_dir=None</em>, <em>session_config=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/zoo/tfpark/gan/gan_estimator.html#GANEstimator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zoo.tfpark.gan.gan_estimator.GANEstimator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="zoo.tfpark.gan.gan_estimator.GANEstimator.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>input_fn</em>, <em>end_trigger</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/zoo/tfpark/gan/gan_estimator.html#GANEstimator.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zoo.tfpark.gan.gan_estimator.GANEstimator.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-zoo.tfpark.gan">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-zoo.tfpark.gan" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="zoo.tfpark.text.html" class="btn btn-neutral float-right" title="zoo.tfpark.text package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="zoo.tfpark.html" class="btn btn-neutral float-left" title="zoo.tfpark package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
