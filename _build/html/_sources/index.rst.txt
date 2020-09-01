@@ -1,5 +1,5 @@
 .. analytics-zoo documentation master file, created by
-   sphinx-quickstart on Sun Aug 30 08:21:01 2020.
+   sphinx-quickstart on Tue Sep  1 05:18:48 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -7,10 +7,9 @@ Welcome to analytics-zoo's documentation!
 =========================================
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: -1
    :caption: Contents:
 
-   conf
    zoo
 
 

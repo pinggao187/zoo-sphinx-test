@@ -14,11 +14,12 @@
 #
 import os
 import sys
-import sphinx_rtd_theme
 sys.path.insert(0, '.')
 sys.path.insert(0, u'/opt/work/spark-2.2.2/python/lib/pyspark.zip')
 sys.path.insert(0, '/opt/work/jenkins/workspace/ZOO-NB-Doc-Generation/analytics-zoo/pyzoo')
-
+import sphinx_rtd_theme
+html_theme = "sphinx_rtd_theme"
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # -- Project information -----------------------------------------------------
 
@@ -82,8 +83,7 @@ pygments_style = None
 # a list of builtin themes.
 #
 #html_theme = 'sphinxdoc'
-html_theme = "sphinx_rtd_theme"
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
