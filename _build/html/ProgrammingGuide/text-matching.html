@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Build a KNRM Model &mdash; analytics-zoo  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> analytics-zoo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PythonAPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.automl.html">zoo.automl package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.common.html">zoo.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.examples.html">zoo.examples package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.feature.html">zoo.feature package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.models.html">zoo.models package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.orca.html">zoo.orca package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.pipeline.html">zoo.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.ray.html">zoo.ray package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.tfpark.html">zoo.tfpark package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.util.html">zoo.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.zouwu.html">zoo.zouwu package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html">Launch an Analytics Zoo Docker Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#run-analytics-zoo-jupyter-notebook-example-in-a-container">Run Analytics Zoo Jupyter Notebook example in a container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#create-a-new-analytics-zoo-jupyter-notebook-example">Create a new Analytics Zoo Jupyter Notebook example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#shut-down-the-analytics-zoo-docker-container">Shut Down the Analytics Zoo Docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#build-a-customized-analytics-zoo-docker-image">Build a customized Analytics Zoo Docker image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#pre-installed-packages">Pre-installed Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html"><strong>Install the latest nightly build wheels for pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-local-usage"><strong>Install from pip for local usage</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-yarn-cluster"><strong>Install from pip for Yarn cluster</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-without-pip"><strong>Install without pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html"><strong>Run after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-on-yarn-after-pip-install"><strong>Run on Yarn after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-without-pip-install"><strong>Run without pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#example-code"><strong>Example code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html"><strong>Download Analytics Zoo Source Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#build-whl-package-for-pip-install"><strong>Build whl package for pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#run-in-ide"><strong>Run in IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html"><strong>Download a pre-built library</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-release-version"><strong>Link with a release version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-development-version"><strong>Link with a development version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#download-analytics-zoo-source"><strong>Download Analytics Zoo Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-build-environment"><strong>Setup Build Environment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-script-recommended"><strong>Build with script (Recommended)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-spark-1-6"><strong>Build for Spark 1.6</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-scala-2-10-or-2-11"><strong>Build for Scala 2.10 or 2.11</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-maven"><strong>Build with Maven</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-ide"><strong>Setup IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html"><strong>Set Environment Variables</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#use-interactive-spark-shell"><strong>Use Interactive Spark Shell</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#run-as-a-spark-program"><strong>Run as a Spark Program</strong></a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#examples">Examples:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#primary-apis">Primary APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autograd.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferlearning.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html"><strong>Load and predict with pre-trained model</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html#examples"><strong>Examples</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html">System Requirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#pytorch-api">Pytorch API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html#steps-to-run-rayonspark"><strong>Steps to run RayOnSpark</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">analytics-zoo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><strong>Build a KNRM Model</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ProgrammingGuide/text-matching.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Analytics Zoo provides a pre-defined KNRM model that can be used for text matching (e.g. question answering).
+More text matching models will be supported in the future.</p>
+<p><strong>Highlights</strong></p>
+<ol class="simple">
+<li>Easy-to-use Keras-Style defined model which provides compile and fit methods for training. Alternatively, it could be fed into NNFrames or BigDL Optimizer.</li>
+<li>The model can be used for both ranking and classification tasks.</li>
+</ol>
+<hr class="docutils" />
+<div class="section" id="build-a-knrm-model">
+<h1><strong>Build a KNRM Model</strong><a class="headerlink" href="#build-a-knrm-model" title="Permalink to this headline">¶</a></h1>
+<p>Kernel-pooling Neural Ranking Model with RBF kernel. See <a class="reference external" href="https://arxiv.org/abs/1706.06613">here</a> for more details.</p>
+<p>You can call the following API in Scala and Python respectively to create a <code class="docutils literal notranslate"><span class="pre">KNRM</span></code> with <em>pre-trained GloVe word embeddings</em>.</p>
+<p><strong>Scala</strong></p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">knrm</span> <span class="k">=</span> <span class="nc">KNRM</span><span class="o">(</span><span class="n">text1Length</span><span class="o">,</span> <span class="n">text2Length</span><span class="o">,</span> <span class="n">embeddingFile</span><span class="o">,</span> <span class="n">wordIndex</span> <span class="k">=</span> <span class="kc">null</span><span class="o">,</span> <span class="n">trainEmbed</span> <span class="k">=</span> <span class="kc">true</span><span class="o">,</span> <span class="n">kernelNum</span> <span class="k">=</span> <span class="mi">21</span><span class="o">,</span> <span class="n">sigma</span> <span class="k">=</span> <span class="mf">0.1</span><span class="o">,</span> <span class="n">exactSigma</span> <span class="k">=</span> <span class="mf">0.001</span><span class="o">,</span> <span class="n">targetMode</span> <span class="k">=</span> <span class="s">&quot;ranking&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">text1Length</span></code>: Sequence length of text1 (query).</li>
+<li><code class="docutils literal notranslate"><span class="pre">text2Length</span></code>: Sequence length of text2 (doc).</li>
+<li><code class="docutils literal notranslate"><span class="pre">embeddingFile</span></code>: The path to the word embedding file. Currently only <em>glove.6B.50d.txt, glove.6B.100d.txt, glove.6B.200d.txt, glove.6B.300d.txt, glove.42B.300d.txt, glove.840B.300d.txt</em> are supported. You can download from <a class="reference external" href="https://nlp.stanford.edu/projects/glove/">here</a>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">wordIndex</span></code>: Map of word (String) and its corresponding index (integer). The index is supposed to <strong>start from 1</strong> with 0 reserved for unknown words. During the prediction, if you have words that are not in the wordIndex for the training, you can map them to index 0. Default is null. In this case, all the words in the embeddingFile will be taken into account and you can call <code class="docutils literal notranslate"><span class="pre">WordEmbedding.getWordIndex(embeddingFile)</span></code> to retrieve the map.</li>
+<li><code class="docutils literal notranslate"><span class="pre">trainEmbed</span></code>: Boolean. Whether to train the embedding layer or not. Default is true.</li>
+<li><code class="docutils literal notranslate"><span class="pre">kernelNum</span></code>: Integer &gt; 1. The number of kernels to use. Default is 21.</li>
+<li><code class="docutils literal notranslate"><span class="pre">sigma</span></code>: Double. Defines the kernel width, or the range of its softTF count. Default is 0.1.</li>
+<li><code class="docutils literal notranslate"><span class="pre">exactSigma</span></code>: Double. The sigma used for the kernel that harvests exact matches in the case where RBF mu=1.0. Default is 0.001.</li>
+<li><code class="docutils literal notranslate"><span class="pre">targetMode</span></code>: String. The target mode of the model. Either ‘ranking’ or ‘classification’. For ranking, the output will be the relevance score between text1 and text2 and you are recommended to use ‘rank_hinge’ as loss for pairwise training.
+For classification, the last layer will be sigmoid and the output will be the probability between 0 and 1 indicating whether text1 is related to text2 and
+you are recommended to use ‘binary_crossentropy’ as loss for binary classification. Default mode is ‘ranking’.</li>
+</ul>
+<p><strong>Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">knrm</span> <span class="o">=</span> <span class="n">KNRM</span><span class="p">(</span><span class="n">text1_length</span><span class="p">,</span> <span class="n">text2_length</span><span class="p">,</span> <span class="n">embedding_file</span><span class="p">,</span> <span class="n">word_index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">train_embed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">kernel_num</span><span class="o">=</span><span class="mi">21</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">exact_sigma</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">target_mode</span><span class="o">=</span><span class="s2">&quot;ranking&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">text1_length</span></code>: Sequence length of text1 (query).</li>
+<li><code class="docutils literal notranslate"><span class="pre">text2_length</span></code>: Sequence length of text2 (doc).</li>
+<li><code class="docutils literal notranslate"><span class="pre">embedding_file</span></code>: The path to the word embedding file. Currently only <em>glove.6B.50d.txt, glove.6B.100d.txt, glove.6B.200d.txt, glove.6B.300d.txt, glove.42B.300d.txt, glove.840B.300d.txt</em> are supported. You can download from <a class="reference external" href="https://nlp.stanford.edu/projects/glove/">here</a>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">word_index</span></code>: Dictionary of word (string) and its corresponding index (int). The index is supposed to <strong>start from 1</strong> with 0 reserved for unknown words. During the prediction, if you have words that are not in the wordIndex for the training, you can map them to index 0. Default is None. In this case, all the words in the embedding_file will be taken into account and you can call <code class="docutils literal notranslate"><span class="pre">WordEmbedding.get_word_index(embedding_file)</span></code> to retrieve the dictionary.</li>
+<li><code class="docutils literal notranslate"><span class="pre">train_embed</span></code>: Boolean. Whether to train the embedding layer or not. Default is True.</li>
+<li><code class="docutils literal notranslate"><span class="pre">kernel_num</span></code>: Int &gt; 1. The number of kernels to use. Default is 21.</li>
+<li><code class="docutils literal notranslate"><span class="pre">sigma</span></code>: Float. Defines the kernel width, or the range of its softTF count. Default is 0.1.</li>
+<li><code class="docutils literal notranslate"><span class="pre">exact_sigma</span></code>: Float. The sigma used for the kernel that harvests exact matches in the case where RBF mu=1.0. Default is 0.001.</li>
+<li><code class="docutils literal notranslate"><span class="pre">target_mode</span></code>: String. The target mode of the model. Either ‘ranking’ or ‘classification’. For ranking, the output will be the relevance score between text1 and text2 and you are recommended to use ‘rank_hinge’ as loss for pairwise training.
+For classification, the last layer will be sigmoid and the output will be the probability between 0 and 1 indicating whether text1 is related to text2 and
+you are recommended to use ‘binary_crossentropy’ as loss for binary classification. Default mode is ‘ranking’.</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="pairwise-training">
+<h1><strong>Pairwise training</strong><a class="headerlink" href="#pairwise-training" title="Permalink to this headline">¶</a></h1>
+<p>For ranking, the model can be trained pairwisely with the following steps:</p>
+<ol class="simple">
+<li>Read train relations. See <a class="reference external" href="../APIGuide/FeatureEngineering/relation/#read-relations">here</a> for more details.</li>
+<li>Read text1 and text2 corpus as TextSet. See <a class="reference external" href="../APIGuide/FeatureEngineering/text/#read-texts-from-csv-file">here</a> for more details.</li>
+<li>Preprocess text1 and text2 corpus. See <a class="reference external" href="../APIGuide/FeatureEngineering/text/#textset-transformations">here</a> for more details.</li>
+<li>Generate all relation pairs from train relations. Each pair is made up of a positive relation and a negative one of the same id1.
+During the training process, we intend to optimize the margin loss within each pair.
+We provide the following API to generate a <code class="docutils literal notranslate"><span class="pre">TextSet</span></code> for pairwise training:</li>
+</ol>
+<p><strong>Scala</strong></p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">trainSet</span> <span class="k">=</span> <span class="nc">TextSet</span><span class="o">.</span><span class="n">fromRelationPairs</span><span class="o">(</span><span class="n">relations</span><span class="o">,</span> <span class="n">corpus1</span><span class="o">,</span> <span class="n">corpus2</span><span class="o">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">relations</span></code>: RDD or array of Relation.</li>
+<li><code class="docutils literal notranslate"><span class="pre">corpus1</span></code>: TextSet that contains all id1 in relations.</li>
+<li><code class="docutils literal notranslate"><span class="pre">corpus2</span></code>: TextSet that contains all id2 in relations.</li>
+<li>For corpus1 and corpus2 respectively, each text must have been transformed to indices of the same length by
+calling <a class="reference external" href="../APIGuide/FeatureEngineering/text/#tokenization">tokenize</a>, <a class="reference external" href="../APIGuide/FeatureEngineering/text/#word-to-index">word2idx</a>
+and <a class="reference external" href="../APIGuide/FeatureEngineering/text/#sequence-shaping">shapeSequence</a> in order.</li>
+<li>If relations is an RDD, then corpus1 and corpus2 must both be DistributedTextSet.
+If relations is an array, then corpus1 and corpus2 must both be LocalTextSet.</li>
+</ul>
+<p><strong>Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">train_set</span> <span class="o">=</span> <span class="n">TextSet</span><span class="o">.</span><span class="n">from_relation_pairs</span><span class="p">(</span><span class="n">relations</span><span class="p">,</span> <span class="n">corpus1</span><span class="p">,</span> <span class="n">corpus2</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">relations</span></code>: RDD or list of Relation.</li>
+<li><code class="docutils literal notranslate"><span class="pre">corpus1</span></code>: TextSet that contains all id1 in relations.</li>
+<li><code class="docutils literal notranslate"><span class="pre">corpus2</span></code>: TextSet that contains all id2 in relations.</li>
+<li>For corpus1 and corpus2 respectively, each text must have been transformed to indices of the same length by
+calling <a class="reference external" href="../APIGuide/FeatureEngineering/text/#tokenization">tokenize</a>, <a class="reference external" href="../APIGuide/FeatureEngineering/text/#word-to-index">word2idx</a>
+and <a class="reference external" href="../APIGuide/FeatureEngineering/text/#sequence-shaping">shape_sequence</a> in order.</li>
+<li>If relations is an RDD, then corpus1 and corpus2 must both be DistributedTextSet.
+If relations is a list, then corpus1 and corpus2 must both be LocalTextSet.</li>
+</ul>
+<p>Call compile and fit to train the model:</p>
+<p><strong>Scala</strong></p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">model</span> <span class="k">=</span> <span class="nc">Sequential</span><span class="o">().</span><span class="n">add</span><span class="o">(</span><span class="nc">TimeDistributed</span><span class="o">(</span><span class="n">knrm</span><span class="o">,</span> <span class="n">inputShape</span> <span class="k">=</span> <span class="nc">Shape</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="n">text1Length</span> <span class="o">+</span> <span class="n">text2Length</span><span class="o">)))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="o">(</span><span class="n">optimizer</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">SGD</span><span class="o">(</span><span class="n">learningRate</span><span class="o">),</span> <span class="n">loss</span> <span class="k">=</span> <span class="nc">RankHinge</span><span class="o">())</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="o">(</span><span class="n">trainSet</span><span class="o">,</span> <span class="n">batchSize</span><span class="o">,</span> <span class="n">nbEpoch</span><span class="o">)</span>
+</pre></div>
+</div>
+<p><strong>Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">TimeDistributed</span><span class="p">(</span><span class="n">knrm</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">text1Length</span> <span class="o">+</span> <span class="n">text2Length</span><span class="p">)))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">SGD</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">),</span> <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;rank_hinge&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_set</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">nb_epoch</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="listwise-evaluation">
+<h1><strong>Listwise evaluation</strong><a class="headerlink" href="#listwise-evaluation" title="Permalink to this headline">¶</a></h1>
+<p>Given text1 and a list of text2 candidates, we provide metrics <a class="reference external" href="https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Discounted_cumulative_gain">NDCG</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Mean_average_precision">MAP</a> to listwisely evaluate a ranking model with the following steps:</p>
+<ol class="simple">
+<li>Read validation relations. See <a class="reference external" href="../APIGuide/FeatureEngineering/relation/#read-relations">here</a> for more details.</li>
+<li>Read text1 and text2 corpus as TextSet. See <a class="reference external" href="../APIGuide/FeatureEngineering/text/#read-texts-from-csv-file">here</a> for more details.</li>
+<li>Preprocess text1 and text2 corpus same as the training phase. See <a class="reference external" href="../APIGuide/FeatureEngineering/text/#textset-transformations">here</a> for more details.</li>
+<li>Generate all relation lists from validation relations. Each list is made up of one id1 and all id2 combined with id1.
+We provide the following API to generate a <code class="docutils literal notranslate"><span class="pre">TextSet</span></code> for listwise evaluation:</li>
+</ol>
+<p><strong>Scala</strong></p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">validateSet</span> <span class="k">=</span> <span class="nc">TextSet</span><span class="o">.</span><span class="n">fromRelationLists</span><span class="o">(</span><span class="n">relations</span><span class="o">,</span> <span class="n">corpus1</span><span class="o">,</span> <span class="n">corpus2</span><span class="o">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">relations</span></code>: RDD or array of Relation.</li>
+<li><code class="docutils literal notranslate"><span class="pre">corpus1</span></code>: TextSet that contains all id1 in relations.</li>
+<li><code class="docutils literal notranslate"><span class="pre">corpus2</span></code>: TextSet that contains all id2 in relations.</li>
+<li>For corpus1 and corpus2 respectively, each text must have been transformed to indices of the same length as during the training process by
+calling <a class="reference external" href="../APIGuide/FeatureEngineering/text/#tokenization">tokenize</a>, <a class="reference external" href="../APIGuide/FeatureEngineering/text/#word-to-index">word2idx</a>
+and <a class="reference external" href="../APIGuide/FeatureEngineering/text/#sequence-shaping">shapeSequence</a> in order.</li>
+<li>If relations is an RDD, then corpus1 and corpus2 must both be DistributedTextSet.
+If relations is an array, then corpus1 and corpus2 must both be LocalTextSet.</li>
+</ul>
+<p><strong>Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">validate_set</span> <span class="o">=</span> <span class="n">TextSet</span><span class="o">.</span><span class="n">from_relation_lists</span><span class="p">(</span><span class="n">relations</span><span class="p">,</span> <span class="n">corpus1</span><span class="p">,</span> <span class="n">corpus2</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">relations</span></code>: RDD or list of Relation.</li>
+<li><code class="docutils literal notranslate"><span class="pre">corpus1</span></code>: TextSet that contains all id1 in relations.</li>
+<li><code class="docutils literal notranslate"><span class="pre">corpus2</span></code>: TextSet that contains all id2 in relations.</li>
+<li>For corpus1 and corpus2 respectively, each text must have been transformed to indices of the same length as during the training process by
+calling <a class="reference external" href="../APIGuide/FeatureEngineering/text/#tokenization">tokenize</a>, <a class="reference external" href="../APIGuide/FeatureEngineering/text/#word-to-index">word2idx</a>
+and <a class="reference external" href="../APIGuide/FeatureEngineering/text/#sequence-shaping">shape_sequence</a> in order.</li>
+<li>If relations is an RDD, then corpus1 and corpus2 must both be DistributedTextSet.
+If relations is a list, then corpus1 and corpus2 must both be LocalTextSet.</li>
+</ul>
+<p>Call evaluateNDCG or evaluateMAP to evaluate the model:</p>
+<p><strong>Scala</strong></p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">knrm</span><span class="o">.</span><span class="n">evaluateNDCG</span><span class="o">(</span><span class="n">validateSet</span><span class="o">,</span> <span class="n">k</span><span class="o">,</span> <span class="n">threshold</span> <span class="k">=</span> <span class="mf">0.0</span><span class="o">)</span>
+<span class="n">knrm</span><span class="o">.</span><span class="n">evaluateMAP</span><span class="o">(</span><span class="n">validateSet</span><span class="o">,</span> <span class="n">threshold</span> <span class="k">=</span> <span class="mf">0.0</span><span class="o">)</span>
+</pre></div>
+</div>
+<p><strong>Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">knrm</span><span class="o">.</span><span class="n">evaluate_ndcg</span><span class="p">(</span><span class="n">validate_set</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">knrm</span><span class="o">.</span><span class="n">evaluate_map</span><span class="p">(</span><span class="n">validate_set</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">k</span></code>: Positive integer. Rank position in NDCG.</li>
+<li><code class="docutils literal notranslate"><span class="pre">threshold</span></code>: If label &gt; threshold, then it will be considered as a positive record. Default is 0.0.</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="examples">
+<h1><strong>Examples</strong><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>We provide an example to train and evaluate a KNRM model on WikiQA dataset for ranking.</p>
+<p>See <a class="reference external" href="https://github.com/intel-analytics/analytics-zoo/tree/master/zoo/src/main/scala/com/intel/analytics/zoo/examples/qaranker">here</a> for the Scala example.</p>
+<p>See <a class="reference external" href="https://github.com/intel-analytics/analytics-zoo/tree/master/pyzoo/zoo/examples/qaranker">here</a> for the Python example.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

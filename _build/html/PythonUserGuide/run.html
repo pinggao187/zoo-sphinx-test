@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Run after pip install &mdash; analytics-zoo  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Download Analytics Zoo Source Code" href="../DeveloperGuide/python.html" />
+    <link rel="prev" title="Install the latest nightly build wheels for pip" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> analytics-zoo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PythonAPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.automl.html">zoo.automl package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.common.html">zoo.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.examples.html">zoo.examples package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.feature.html">zoo.feature package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.models.html">zoo.models package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.orca.html">zoo.orca package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.pipeline.html">zoo.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.ray.html">zoo.ray package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.tfpark.html">zoo.tfpark package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.util.html">zoo.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.zouwu.html">zoo.zouwu package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html">Launch an Analytics Zoo Docker Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#run-analytics-zoo-jupyter-notebook-example-in-a-container">Run Analytics Zoo Jupyter Notebook example in a container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#create-a-new-analytics-zoo-jupyter-notebook-example">Create a new Analytics Zoo Jupyter Notebook example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#shut-down-the-analytics-zoo-docker-container">Shut Down the Analytics Zoo Docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#build-a-customized-analytics-zoo-docker-image">Build a customized Analytics Zoo Docker image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#pre-installed-packages">Pre-installed Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html"><strong>Install the latest nightly build wheels for pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html#install-from-pip-for-local-usage"><strong>Install from pip for local usage</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html#install-from-pip-for-yarn-cluster"><strong>Install from pip for Yarn cluster</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html#install-without-pip"><strong>Install without pip</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Run after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#run-on-yarn-after-pip-install"><strong>Run on Yarn after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#run-without-pip-install"><strong>Run without pip install</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#run-with-pyspark"><em><strong>Run with pyspark</strong></em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-with-spark-submit"><em><strong>Run with spark-submit</strong></em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-with-jupyter-notebook"><em><strong>Run with Jupyter Notebook</strong></em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-with-conda-environment-on-yarn"><em><strong>Run with conda environment on Yarn</strong></em></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#example-code"><strong>Example code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html"><strong>Download Analytics Zoo Source Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#build-whl-package-for-pip-install"><strong>Build whl package for pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#run-in-ide"><strong>Run in IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html"><strong>Download a pre-built library</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-release-version"><strong>Link with a release version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-development-version"><strong>Link with a development version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#download-analytics-zoo-source"><strong>Download Analytics Zoo Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-build-environment"><strong>Setup Build Environment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-script-recommended"><strong>Build with script (Recommended)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-spark-1-6"><strong>Build for Spark 1.6</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-scala-2-10-or-2-11"><strong>Build for Scala 2.10 or 2.11</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-maven"><strong>Build with Maven</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-ide"><strong>Setup IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html"><strong>Set Environment Variables</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#use-interactive-spark-shell"><strong>Use Interactive Spark Shell</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#run-as-a-spark-program"><strong>Run as a Spark Program</strong></a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/nnframes.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/nnframes.html#examples">Examples:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/nnframes.html#primary-apis">Primary APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/autograd.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/transferlearning.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/inference.html"><strong>Load and predict with pre-trained model</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/inference.html#examples"><strong>Examples</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/pytorch.html">System Requirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/pytorch.html#pytorch-api">Pytorch API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/pytorch.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/rayonspark.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ProgrammingGuide/rayonspark.html#steps-to-run-rayonspark"><strong>Steps to run RayOnSpark</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">analytics-zoo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><strong>Run after pip install</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/PythonUserGuide/run.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>You need to first <a class="reference internal" href="install.html"><span class="doc">install</span></a> analytics-zoo, either <a class="reference external" href="install/#install-from-pip-for-local-usage">from pip</a> or <a class="reference external" href="install/#install-without-pip">without pip</a>.</p>
+<p><strong>NOTE</strong>: We have tested on <strong>Python 3.6</strong> and <strong>Python 3.7</strong>. Support for Python 2.7 has been removed due to its end of life.</p>
+<hr class="docutils" />
+<div class="section" id="run-after-pip-install">
+<h1><strong>Run after pip install</strong><a class="headerlink" href="#run-after-pip-install" title="Permalink to this headline">¶</a></h1>
+<p><strong>Important:</strong></p>
+<ol class="simple">
+<li>Installing analytics-zoo from pip will automatically install <code class="docutils literal notranslate"><span class="pre">pyspark</span></code>. To avoid possible conflicts, you are highly recommended to <strong>unset <code class="docutils literal notranslate"><span class="pre">SPARK_HOME</span></code></strong> if it exists in your environment.</li>
+<li>Please always first call <code class="docutils literal notranslate"><span class="pre">init_nncontext()</span></code> at the very beginning of your code after pip install. This will create a SparkContext with optimized performance configuration and initialize the BigDL engine.</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.common.nncontext</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">init_nncontext</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><em><strong>Use an Interactive Shell</strong></em></p>
+<ul class="simple">
+<li>Type <code class="docutils literal notranslate"><span class="pre">python</span></code> in the command line to start a REPL.</li>
+<li>Try to run the <a class="reference external" href="#example-code">example code</a> to verify the installation.</li>
+</ul>
+<p><em><strong>Use Jupyter Notebook</strong></em></p>
+<ul class="simple">
+<li>Start jupyter notebook as you normally do, e.g.</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter notebook --notebook-dir<span class="o">=</span>./ --ip<span class="o">=</span>* --no-browser
+</pre></div>
+</div>
+<ul class="simple">
+<li>Try to run the <a class="reference external" href="#example-code">example code</a> to verify the installation.</li>
+</ul>
+<p><em><strong>Configurations</strong></em></p>
+<ul class="simple">
+<li>Increase memory</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">SPARK_DRIVER_MEMORY</span><span class="o">=</span>20g
+</pre></div>
+</div>
+<ul class="simple">
+<li>Add extra jars or python packages</li>
+</ul>
+<p>  Set the environment variables <code class="docutils literal notranslate"><span class="pre">BIGDL_JARS</span></code> and <code class="docutils literal notranslate"><span class="pre">BIGDL_PACKAGES</span></code> <strong>BEFORE</strong> creating <code class="docutils literal notranslate"><span class="pre">SparkContext</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">BIGDL_JARS</span><span class="o">=</span>...
+<span class="nb">export</span> <span class="nv">BIGDL_PACKAGES</span><span class="o">=</span>...
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="run-on-yarn-after-pip-install">
+<h1><strong>Run on Yarn after pip install</strong><a class="headerlink" href="#run-on-yarn-after-pip-install" title="Permalink to this headline">¶</a></h1>
+<p>You should use <code class="docutils literal notranslate"><span class="pre">init_spark_on_yarn</span></code> rather than <code class="docutils literal notranslate"><span class="pre">init_nncontext()</span></code> here to create a SparkContext on Yarn.</p>
+<p>Start python and then execute the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo</span> <span class="kn">import</span> <span class="n">init_spark_on_yarn</span>
+
+<span class="n">sc</span> <span class="o">=</span> <span class="n">init_spark_on_yarn</span><span class="p">(</span>
+    <span class="n">hadoop_conf</span><span class="o">=</span><span class="s2">&quot;path to the yarn configuration folder&quot;</span><span class="p">,</span>
+    <span class="n">conda_name</span><span class="o">=</span><span class="s2">&quot;zoo&quot;</span><span class="p">,</span> <span class="c1"># The name of the created conda-env</span>
+    <span class="n">num_executor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">executor_cores</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">executor_memory</span><span class="o">=</span><span class="s2">&quot;8g&quot;</span><span class="p">,</span>
+    <span class="n">driver_memory</span><span class="o">=</span><span class="s2">&quot;2g&quot;</span><span class="p">,</span>
+    <span class="n">driver_cores</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">extra_executor_memory_for_ray</span><span class="o">=</span><span class="s2">&quot;10g&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="run-without-pip-install">
+<h1><strong>Run without pip install</strong><a class="headerlink" href="#run-without-pip-install" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Note that <strong>Python 3.6</strong> is only compatible with Spark 1.6.4, 2.0.3, 2.1.1 and &gt;=2.2.0. See <a class="reference external" href="https://issues.apache.org/jira/browse/SPARK-19019">this issue</a> for more discussion.</li>
+</ul>
+<p><em><strong>Set SPARK_HOME and ANALYTICS_ZOO_HOME</strong></em></p>
+<ul class="simple">
+<li>If you download Analytics Zoo from the <a class="reference external" href="../release-download">Release Page</a>:</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">SPARK_HOME</span><span class="o">=</span>the root directory of Spark
+<span class="nb">export</span> <span class="nv">ANALYTICS_ZOO_HOME</span><span class="o">=</span>the path where you extract the analytics-zoo package
+</pre></div>
+</div>
+<ul class="simple">
+<li>If you build Analytics Zoo by yourself:</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">SPARK_HOME</span><span class="o">=</span>the root directory of Spark
+<span class="nb">export</span> <span class="nv">ANALYTICS_ZOO_HOME</span><span class="o">=</span>the dist directory of Analytics Zoo
+</pre></div>
+</div>
+<p><em><strong>Update spark-analytics-zoo.conf (Optional)</strong></em></p>
+<p>If you have some customized properties in some files, which will be used with the <code class="docutils literal notranslate"><span class="pre">--properties-file</span></code> option
+in <code class="docutils literal notranslate"><span class="pre">spark-submit/pyspark</span></code>, you can add these customized properties into ${ANALYTICS_ZOO_HOME}/conf/spark-analytics-zoo.conf.</p>
+<hr class="docutils" />
+<div class="section" id="run-with-pyspark">
+<h2><em><strong>Run with pyspark</strong></em><a class="headerlink" href="#run-with-pyspark" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="si">${</span><span class="nv">ANALYTICS_ZOO_HOME</span><span class="si">}</span>/bin/pyspark-shell-with-zoo.sh --master local<span class="o">[</span>*<span class="o">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">--master</span></code> set the master URL to connect to</li>
+<li><code class="docutils literal notranslate"><span class="pre">--jars</span></code> if there are extra jars needed.</li>
+<li><code class="docutils literal notranslate"><span class="pre">--py-files</span></code> if there are extra python packages needed.</li>
+</ul>
+<p>You can also specify other options available for pyspark in the above command if needed.</p>
+<p>Try to run the <a class="reference external" href="#example-code">example code</a> for verification.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="run-with-spark-submit">
+<h2><em><strong>Run with spark-submit</strong></em><a class="headerlink" href="#run-with-spark-submit" title="Permalink to this headline">¶</a></h2>
+<p>An Analytics Zoo Python program runs as a standard pyspark program, which requires all Python dependencies
+(e.g., numpy) used by the program to be installed on each node in the Spark cluster. You can try
+running the Analytics Zoo <a class="reference external" href="https://github.com/intel-analytics/analytics-zoo/tree/master/pyzoo/zoo/examples/objectdetection">Object Detection Python example</a>
+as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="si">${</span><span class="nv">ANALTICS_ZOO_HOME</span><span class="si">}</span>/bin/spark-submit-python-with-zoo.sh --master local<span class="o">[</span>*<span class="o">]</span> predict.py model_path image_path output_path
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="run-with-jupyter-notebook">
+<h2><em><strong>Run with Jupyter Notebook</strong></em><a class="headerlink" href="#run-with-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<p>With the full Python API support in Analytics Zoo, users can use our package together with powerful notebooks
+(such as Jupyter Notebook) in a distributed fashion across the cluster, combining Python libraries,
+Spark SQL/DataFrames and MLlib, deep learning models in Analytics Zoo, as well as interactive
+visualization tools.</p>
+<p><strong>Prerequisites</strong>: Install all the necessary libraries on the local node where you will run Jupyter, e.g.,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install python
+sudo apt install python-pip
+sudo pip install numpy scipy pandas scikit-learn matplotlib seaborn wordcloud
+</pre></div>
+</div>
+<p>Launch the Jupyter Notebook as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="si">${</span><span class="nv">ANALYTICS_ZOO_HOME</span><span class="si">}</span>/bin/jupyter-with-zoo.sh --master local<span class="o">[</span>*<span class="o">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">--master</span></code> set the master URL to connect to</li>
+<li><code class="docutils literal notranslate"><span class="pre">--jars</span></code> if there are extra jars needed.</li>
+<li><code class="docutils literal notranslate"><span class="pre">--py-files</span></code> if there are extra python packages needed.</li>
+</ul>
+<p>You can also specify other options available for pyspark in the above command if needed.</p>
+<p>After successfully launching Jupyter, you will be able to navigate to the notebook dashboard using
+your browser. You can find the exact URL in the console output when you started Jupyter; by default,
+the dashboard URL is http://your_node:8888/</p>
+<p>Try to run the <a class="reference external" href="#example-code">example code</a> for verification.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="run-with-conda-environment-on-yarn">
+<h2><em><strong>Run with conda environment on Yarn</strong></em><a class="headerlink" href="#run-with-conda-environment-on-yarn" title="Permalink to this headline">¶</a></h2>
+<p>If you have already created Analytics Zoo dependency conda environment package according to Yarn cluster guide <a class="reference external" href="install/#for-yarn-cluster">here</a>,
+you can run Python programs using Analytics Zoo using the following command.</p>
+<p>Here we use Analytics Zoo <a class="reference external" href="https://github.com/intel-analytics/analytics-zoo/tree/master/pyzoo/zoo/examples/objectdetection">Object Detection Python example</a> for illustration.</p>
+<ul class="simple">
+<li>Yarn cluster mode (with conda package name “environment.tar.gz” for example)</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">SPARK_HOME</span><span class="o">=</span>the root directory of Spark
+<span class="nb">export</span> <span class="nv">ANALYTICS_ZOO_HOME</span><span class="o">=</span>the folder where you extract the downloaded Analytics Zoo zip package
+<span class="nb">export</span> <span class="nv">ENV_HOME</span><span class="o">=</span>the parent directory of your conda environment package
+
+<span class="nv">PYSPARK_PYTHON</span><span class="o">=</span>./environment/bin/python <span class="si">${</span><span class="nv">ANALYTICS_ZOO_HOME</span><span class="si">}</span>/bin/spark-submit-python-with-zoo.sh <span class="se">\</span>
+    --conf spark.yarn.appMasterEnv.PYSPARK_PYTHON<span class="o">=</span>./environment/bin/python <span class="se">\</span>
+    --master yarn-cluster <span class="se">\</span>
+    --executor-memory 10g <span class="se">\</span>
+    --driver-memory 10g <span class="se">\</span>
+    --executor-cores <span class="m">8</span> <span class="se">\</span>
+    --num-executors <span class="m">2</span> <span class="se">\</span>
+    --archives <span class="si">${</span><span class="nv">ENV_HOME</span><span class="si">}</span>/environment.tar.gz#environment <span class="se">\</span>
+    predict.py model_path image_path output_path
+</pre></div>
+</div>
+<ul class="simple">
+<li>Yarn client mode (with conda package name “environment.tar.gz” for example)</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">SPARK_HOME</span><span class="o">=</span>the root directory of Spark
+<span class="nb">export</span> <span class="nv">ANALYTICS_ZOO_HOME</span><span class="o">=</span>the folder where you extract the downloaded Analytics Zoo zip package
+<span class="nb">export</span> <span class="nv">ENV_HOME</span><span class="o">=</span>the parent directory of your conda environment package
+
+mkdir <span class="si">${</span><span class="nv">ENV_HOME</span><span class="si">}</span>/environment
+tar -xzf <span class="si">${</span><span class="nv">ENV_HOME</span><span class="si">}</span>/environment.tar.gz -C <span class="si">${</span><span class="nv">ENV_HOME</span><span class="si">}</span>/environment
+
+<span class="nv">PYSPARK_DRIVER_PYTHON</span><span class="o">=</span><span class="si">${</span><span class="nv">ENV_HOME</span><span class="si">}</span>/environment/bin/python <span class="nv">PYSPARK_PYTHON</span><span class="o">=</span>./environment/bin/python <span class="si">${</span><span class="nv">ANALYTICS_ZOO_HOME</span><span class="si">}</span>/bin/spark-submit-python-with-zoo.sh <span class="se">\</span>
+    --master yarn <span class="se">\</span>
+    --deploy-mode client <span class="se">\</span>
+    --executor-memory 10g <span class="se">\</span>
+    --driver-memory 10g <span class="se">\</span>
+    --executor-cores <span class="m">16</span> <span class="se">\</span>
+    --num-executors <span class="m">2</span> <span class="se">\</span>
+    --archives <span class="si">${</span><span class="nv">ENV_HOME</span><span class="si">}</span>/environment.tar.gz#environment <span class="se">\</span>
+    predict.py model_path image_path output_path
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-code">
+<h1><strong>Example code</strong><a class="headerlink" href="#example-code" title="Permalink to this headline">¶</a></h1>
+<p>To verify if Analytics Zoo can run successfully, run the following simple code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">zoo</span>
+<span class="kn">from</span> <span class="nn">zoo.common.nncontext</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.keras.models</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.keras.layers</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Get the current Analytics Zoo version</span>
+<span class="n">zoo</span><span class="o">.</span><span class="n">__version__</span>
+<span class="c1"># Create a SparkContext and initialize the BigDL engine.</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">init_nncontext</span><span class="p">()</span>
+<span class="c1"># Create a Sequential model containing a Dense layer.</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../DeveloperGuide/python.html" class="btn btn-neutral float-right" title="Download Analytics Zoo Source Code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral float-left" title="Install the latest nightly build wheels for pip" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

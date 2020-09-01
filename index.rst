@@ -6,12 +6,50 @@
 Welcome to analytics-zoo's documentation!
 =========================================
 
+
+
 .. toctree::
    :maxdepth: -1
-   :caption: Contents:
+   :caption: PythonAPI
 
-   zoo
+   zoo.automl
+   zoo.common
+   zoo.examples
+   zoo.feature
+   zoo.models
+   zoo.orca
+   zoo.pipeline
+   zoo.ray
+   zoo.tfpark
+   zoo.util
+   zoo.zouwu
 
+
+.. toctree::
+   :maxdepth: -1
+   :caption: User Guide
+   
+   DockerUserGuide/index
+   PythonUserGuide/install
+   PythonUserGuide/run
+   DeveloperGuide/python
+   PythonUserGuide/python-lib-version
+   ScalaUserGuide/install
+   ScalaUserGuide/run
+
+
+.. toctree::
+   :maxdepth: -1
+   :caption: Programming Guide
+ 
+   ProgrammingGuide/nnframes
+   ProgrammingGuide/autograd
+   ProgrammingGuide/transferlearning
+   ProgrammingGuide/inference
+   ProgrammingGuide/pytorch
+   ProgrammingGuide/rayonspark   
+
+   
 
 Indices and tables
 ==================

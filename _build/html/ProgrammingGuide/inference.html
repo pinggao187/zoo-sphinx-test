@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Load and predict with pre-trained model &mdash; analytics-zoo  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="System Requirement" href="pytorch.html" />
+    <link rel="prev" title="Overview" href="transferlearning.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> analytics-zoo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PythonAPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.automl.html">zoo.automl package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.common.html">zoo.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.examples.html">zoo.examples package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.feature.html">zoo.feature package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.models.html">zoo.models package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.orca.html">zoo.orca package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.pipeline.html">zoo.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.ray.html">zoo.ray package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.tfpark.html">zoo.tfpark package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.util.html">zoo.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.zouwu.html">zoo.zouwu package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html">Launch an Analytics Zoo Docker Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#run-analytics-zoo-jupyter-notebook-example-in-a-container">Run Analytics Zoo Jupyter Notebook example in a container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#create-a-new-analytics-zoo-jupyter-notebook-example">Create a new Analytics Zoo Jupyter Notebook example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#shut-down-the-analytics-zoo-docker-container">Shut Down the Analytics Zoo Docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#build-a-customized-analytics-zoo-docker-image">Build a customized Analytics Zoo Docker image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#pre-installed-packages">Pre-installed Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html"><strong>Install the latest nightly build wheels for pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-local-usage"><strong>Install from pip for local usage</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-yarn-cluster"><strong>Install from pip for Yarn cluster</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-without-pip"><strong>Install without pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html"><strong>Run after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-on-yarn-after-pip-install"><strong>Run on Yarn after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-without-pip-install"><strong>Run without pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#example-code"><strong>Example code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html"><strong>Download Analytics Zoo Source Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#build-whl-package-for-pip-install"><strong>Build whl package for pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#run-in-ide"><strong>Run in IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html"><strong>Download a pre-built library</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-release-version"><strong>Link with a release version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-development-version"><strong>Link with a development version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#download-analytics-zoo-source"><strong>Download Analytics Zoo Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-build-environment"><strong>Setup Build Environment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-script-recommended"><strong>Build with script (Recommended)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-spark-1-6"><strong>Build for Spark 1.6</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-scala-2-10-or-2-11"><strong>Build for Scala 2.10 or 2.11</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-maven"><strong>Build with Maven</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-ide"><strong>Setup IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html"><strong>Set Environment Variables</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#use-interactive-spark-shell"><strong>Use Interactive Spark Shell</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#run-as-a-spark-program"><strong>Run as a Spark Program</strong></a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#examples">Examples:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#primary-apis">Primary APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autograd.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferlearning.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Load and predict with pre-trained model</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#examples"><strong>Examples</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html">System Requirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#pytorch-api">Pytorch API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html#steps-to-run-rayonspark"><strong>Steps to run RayOnSpark</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">analytics-zoo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><strong>Load and predict with pre-trained model</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ProgrammingGuide/inference.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Inference Model is a package in Analytics Zoo aiming to provide high-level APIs to speed-up development. It allows user to conveniently use pre-trained models from Analytics Zoo, Caffe, Tensorflow and OpenVINO Intermediate Representation(IR). Inference Model provides Java, Scala and Python interfaces.</p>
+<p><strong>Highlights</strong></p>
+<ol class="simple">
+<li>Easy-to-use APIs for loading and prediction with deep learning models of Analytics Zoo, Caffe, Tensorflow and OpenVINO Intermediate Representation(IR).</li>
+<li>Support transformation of various input data type, thus supporting future prediction tasks.</li>
+<li>Transparently support the OpenVINO toolkit, which deliver a significant boost for inference speed (<a class="reference external" href="https://software.intel.com/en-us/blogs/2018/05/15/accelerate-computer-vision-from-edge-to-cloud-with-openvino-toolkit">up to 19.9x</a>).</li>
+</ol>
+<div class="section" id="load-and-predict-with-pre-trained-model">
+<h1><strong>Load and predict with pre-trained model</strong><a class="headerlink" href="#load-and-predict-with-pre-trained-model" title="Permalink to this headline">¶</a></h1>
+<p><strong>Basic usage of Inference Model:</strong></p>
+<ol class="simple">
+<li>Directly use InferenceModel or write a subclass extends <code class="docutils literal notranslate"><span class="pre">InferenceModel</span></code> (<code class="docutils literal notranslate"><span class="pre">AbstractInferenceModel</span></code> in Java).</li>
+<li>Load pre-trained models with corresponding <code class="docutils literal notranslate"><span class="pre">load</span></code> methods, e.g, <code class="docutils literal notranslate"><span class="pre">doLoadBigDL</span></code> for Analytics Zoo, and <code class="docutils literal notranslate"><span class="pre">doLoadTensorflow</span></code> for TensorFlow.</li>
+<li>Do prediction with <code class="docutils literal notranslate"><span class="pre">predict</span></code> method.</li>
+</ol>
+<p><strong>Supported models:</strong></p>
+<ol class="simple">
+<li><a class="reference external" href="https://analytics-zoo.github.io/master/##built-in-deep-learning-models">Analytics Zoo Models</a></li>
+<li><a class="reference external" href="https://github.com/BVLC/caffe/wiki/Model-Zoo">Caffe Models</a></li>
+<li><a class="reference external" href="https://github.com/tensorflow/models">TensorFlow Models</a></li>
+<li><a class="reference external" href="https://software.intel.com/en-us/openvino-toolkit/documentation/pretrained-models">OpenVINO models</a></li>
+</ol>
+<p><strong>Predict input and output</strong></p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">predictInput</span></code>: JList[JList[JTensor]] or <a class="reference external" href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/tensor">Tensor</a> for Scale and Java, Numpy for Python. Input data for prediction. <a class="reference external" href="https://github.com/intel-analytics/analytics-zoo/blob/master/zoo/src/main/java/com/intel/analytics/zoo/pipeline/inference/JTensor.java">JTensor</a> is a 1D List, with Array[Int] shape.</li>
+<li><code class="docutils literal notranslate"><span class="pre">predictOutput</span></code>: JList[JList[JTensor]] or <a class="reference external" href="https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/tensor">Tensor</a> for Scale and Java, Numpy for Python. Prediction result.</li>
+</ul>
+<p><strong>OpenVINO requirements:</strong></p>
+<p><a class="reference external" href="https://software.intel.com/en-us/openvino-toolkit/documentation/system-requirements">System requirements</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ubuntu</span> <span class="mf">18.04</span> <span class="n">LTS</span> <span class="p">(</span><span class="mi">64</span> <span class="n">bit</span><span class="p">)</span>
+<span class="n">CentOS</span> <span class="mf">7.4</span> <span class="p">(</span><span class="mi">64</span> <span class="n">bit</span><span class="p">)</span>
+<span class="n">macOS</span> <span class="mf">10.13</span><span class="p">,</span> <span class="mf">10.14</span> <span class="p">(</span><span class="mi">64</span> <span class="n">bit</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Python requirements:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tensorflow</span><span class="o">&gt;=</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">networkx</span><span class="o">&gt;=</span><span class="mf">1.11</span>
+<span class="n">numpy</span><span class="o">&gt;=</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">protobuf</span><span class="o">==</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Java</strong></p>
+<p>Write a subclass that extends <code class="docutils literal notranslate"><span class="pre">AbstractInferenceModel</span></code>, implement or override methods. Then, load model with corresponding <code class="docutils literal notranslate"><span class="pre">load</span></code> methods (load Analytics Zoo, caffe, OpenVINO and TensorFlow model with <code class="docutils literal notranslate"><span class="pre">loadBigDL</span></code>, <code class="docutils literal notranslate"><span class="pre">loadCaffe</span></code>, <code class="docutils literal notranslate"><span class="pre">loadOpenVINO</span></code> and <code class="docutils literal notranslate"><span class="pre">loadTensorflow</span></code>), and do prediction with <code class="docutils literal notranslate"><span class="pre">predict</span></code> method.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.intel.analytics.zoo.pipeline.inference.AbstractInferenceModel</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.intel.analytics.zoo.pipeline.inference.JTensor</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExtendedInferenceModel</span> <span class="kd">extends</span> <span class="n">AbstractInferenceModel</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">ExtendedInferenceModel</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">ExtendedInferenceModel</span> <span class="n">model</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ExtendedInferenceModel</span><span class="p">();</span>
+<span class="c1">// Load Analytics Zoo model</span>
+<span class="n">model</span><span class="p">.</span><span class="na">loadBigDL</span><span class="p">(</span><span class="n">modelPath</span><span class="p">,</span> <span class="n">weightPath</span><span class="p">);</span>
+<span class="c1">// Predict</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">JTensor</span><span class="o">&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="na">predict</span><span class="p">(</span><span class="n">inputList</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Scala</strong></p>
+<p>New an instance of <code class="docutils literal notranslate"><span class="pre">InferenceModel</span></code>, and load model with corresponding <code class="docutils literal notranslate"><span class="pre">load</span></code> methods (load Analytics Zoo, caffe, OpenVINO and TensorFlow model with <code class="docutils literal notranslate"><span class="pre">doLoadBigDL</span></code>, <code class="docutils literal notranslate"><span class="pre">doLoadCaffe</span></code>, <code class="docutils literal notranslate"><span class="pre">doLoadOpenVINO</span></code> and <code class="docutils literal notranslate"><span class="pre">doLoadTensorflow</span></code>), then do prediction with <code class="docutils literal notranslate"><span class="pre">predict</span></code> method.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">com.intel.analytics.zoo.pipeline.inference.InferenceModel</span>
+
+<span class="k">val</span> <span class="n">model</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">InferenceModel</span><span class="o">()</span>
+<span class="c1">// Load Analytics Zoo model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">doLoadBigDL</span><span class="o">(</span><span class="n">modelPath</span><span class="o">,</span> <span class="n">weightPath</span><span class="o">)</span>
+<span class="c1">// Predict</span>
+<span class="k">val</span> <span class="n">result</span> <span class="k">=</span> <span class="n">model</span><span class="o">.</span><span class="n">doPredict</span><span class="o">(</span><span class="n">inputList</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>In some cases, you may want to write a subclass that extends <code class="docutils literal notranslate"><span class="pre">InferenceModel</span></code>, implement or override methods. Then, load model with corresponding <code class="docutils literal notranslate"><span class="pre">load</span></code> methods, and do prediction with <code class="docutils literal notranslate"><span class="pre">predict</span></code> method.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">com.intel.analytics.zoo.pipeline.inference.InferenceModel</span>
+
+<span class="k">class</span> <span class="nc">ExtendedInferenceModel</span> <span class="k">extends</span> <span class="nc">InferenceModel</span> <span class="o">{</span>
+
+<span class="o">}</span>
+
+<span class="k">val</span> <span class="n">model</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">ExtendedInferenceModel</span><span class="o">()</span>
+<span class="c1">// Load Analytics Zoo model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">doLoadBigDL</span><span class="o">(</span><span class="n">modelPath</span><span class="o">,</span> <span class="n">weightPath</span><span class="o">)</span>
+<span class="c1">// Predict</span>
+<span class="k">val</span> <span class="n">result</span> <span class="k">=</span> <span class="n">model</span><span class="o">.</span><span class="n">doPredict</span><span class="o">(</span><span class="n">inputList</span><span class="o">)</span>
+</pre></div>
+</div>
+<p><strong>Python</strong></p>
+<p>New an instance of <code class="docutils literal notranslate"><span class="pre">InferenceModel</span></code>, and load Zoo model with corresponding <code class="docutils literal notranslate"><span class="pre">load</span></code> methods (load Analytics Zoo, caffe, OpenVINO and TensorFlow model with <code class="docutils literal notranslate"><span class="pre">load_bigdl</span></code>, <code class="docutils literal notranslate"><span class="pre">load_caffe</span></code>, <code class="docutils literal notranslate"><span class="pre">load_openvino</span></code> and <code class="docutils literal notranslate"><span class="pre">load_tensorflow</span></code>), then do prediction with <code class="docutils literal notranslate"><span class="pre">predict</span></code> method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.pipeline.inference</span> <span class="kn">import</span> <span class="n">InferenceModel</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">InferenceModel</span><span class="p">()</span>
+<span class="c1"># Load Analytics Zoo model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">load_bigdl</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span> <span class="n">weight_path</span><span class="p">)</span>
+<span class="c1"># Predict</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In some cases, you may want to write a subclass that extends <code class="docutils literal notranslate"><span class="pre">InferenceModel</span></code>, implement or override methods. Then, load model with corresponding <code class="docutils literal notranslate"><span class="pre">load</span></code> methods, and do prediction with <code class="docutils literal notranslate"><span class="pre">predict</span></code> method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.pipeline.inference</span> <span class="kn">import</span> <span class="n">InferenceModel</span>
+
+<span class="k">class</span> <span class="nc">ExtendedInferenceModel</span><span class="p">(</span><span class="n">InferenceModel</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">ExtendedInferenceModel</span><span class="p">()</span>
+<span class="c1"># Load Analytics Zoo model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">load_bigdl</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span> <span class="n">weight_path</span><span class="p">)</span>
+<span class="c1"># Predict</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h1><strong>Examples</strong><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>We provide examples based on InferenceModel.</p>
+<p>See <a class="reference external" href="https://github.com/intel-analytics/analytics-zoo/tree/master/apps/model-inference-examples">here</a> for the Java example.</p>
+<p>See <a class="reference external" href="https://github.com/intel-analytics/analytics-zoo/tree/master/zoo/src/main/scala/com/intel/analytics/zoo/examples/streaming/textclassification">here</a> for the Scala example.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pytorch.html" class="btn btn-neutral float-right" title="System Requirement" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="transferlearning.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ImageSet &mdash; analytics-zoo  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> analytics-zoo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PythonAPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.automl.html">zoo.automl package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.common.html">zoo.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.examples.html">zoo.examples package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.feature.html">zoo.feature package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.models.html">zoo.models package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.orca.html">zoo.orca package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.pipeline.html">zoo.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.ray.html">zoo.ray package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.tfpark.html">zoo.tfpark package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.util.html">zoo.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.zouwu.html">zoo.zouwu package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html">Launch an Analytics Zoo Docker Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#run-analytics-zoo-jupyter-notebook-example-in-a-container">Run Analytics Zoo Jupyter Notebook example in a container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#create-a-new-analytics-zoo-jupyter-notebook-example">Create a new Analytics Zoo Jupyter Notebook example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#shut-down-the-analytics-zoo-docker-container">Shut Down the Analytics Zoo Docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#build-a-customized-analytics-zoo-docker-image">Build a customized Analytics Zoo Docker image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#pre-installed-packages">Pre-installed Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html"><strong>Install the latest nightly build wheels for pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-local-usage"><strong>Install from pip for local usage</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-yarn-cluster"><strong>Install from pip for Yarn cluster</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-without-pip"><strong>Install without pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html"><strong>Run after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-on-yarn-after-pip-install"><strong>Run on Yarn after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-without-pip-install"><strong>Run without pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#example-code"><strong>Example code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html"><strong>Download Analytics Zoo Source Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#build-whl-package-for-pip-install"><strong>Build whl package for pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#run-in-ide"><strong>Run in IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html"><strong>Download a pre-built library</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-release-version"><strong>Link with a release version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-development-version"><strong>Link with a development version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#download-analytics-zoo-source"><strong>Download Analytics Zoo Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-build-environment"><strong>Setup Build Environment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-script-recommended"><strong>Build with script (Recommended)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-spark-1-6"><strong>Build for Spark 1.6</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-scala-2-10-or-2-11"><strong>Build for Scala 2.10 or 2.11</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-maven"><strong>Build with Maven</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-ide"><strong>Setup IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html"><strong>Set Environment Variables</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#use-interactive-spark-shell"><strong>Use Interactive Spark Shell</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#run-as-a-spark-program"><strong>Run as a Spark Program</strong></a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#examples">Examples:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#primary-apis">Primary APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autograd.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferlearning.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html"><strong>Load and predict with pre-trained model</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html#examples"><strong>Examples</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html">System Requirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#pytorch-api">Pytorch API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html#steps-to-run-rayonspark"><strong>Steps to run RayOnSpark</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">analytics-zoo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><strong>ImageSet</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ProgrammingGuide/data.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <hr class="docutils" />
+<div class="section" id="imageset">
+<h1><strong>ImageSet</strong><a class="headerlink" href="#imageset" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">ImageSet</span></code> is a collection of <code class="docutils literal notranslate"><span class="pre">ImageFeature</span></code>.
+It can be a <code class="docutils literal notranslate"><span class="pre">DistributedImageSet</span></code> for distributed image RDD or
+<code class="docutils literal notranslate"><span class="pre">LocalImageSet</span></code> for local image array.
+You can read an <code class="docutils literal notranslate"><span class="pre">ImageSet</span></code> from local/distributed folder,
+or you can directly construct a ImageSet from RDD[ImageFeature] or Array[ImageFeature].</p>
+<p><strong>Scala example:</strong></p>
+<p>Create LocalImageSet, assume there is an image file “/tmp/test.jpg”
+and an image folder “/tmp/image/”</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">com.intel.analytics.bigdl.transform.vision.image.ImageFeature</span>
+<span class="k">import</span> <span class="nn">com.intel.analytics.zoo.feature.image.ImageSet</span>
+
+<span class="c1">// create LocalImageSet from an image</span>
+<span class="k">val</span> <span class="n">localImageSet</span> <span class="k">=</span> <span class="nc">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="o">(</span><span class="s">&quot;/tmp/test.jpg&quot;</span><span class="o">)</span>
+
+<span class="c1">// create LocalImageSet from an image folder</span>
+<span class="k">val</span> <span class="n">localImageSet2</span> <span class="k">=</span> <span class="nc">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="o">(</span><span class="s">&quot;/tmp/image/&quot;</span><span class="o">)</span>
+
+<span class="c1">// create LocalImageSet from array of ImageFeature</span>
+<span class="k">val</span> <span class="n">array</span> <span class="k">=</span> <span class="nc">Array</span><span class="o">[</span><span class="kt">ImageFeature</span><span class="o">]()</span>
+<span class="k">val</span> <span class="n">localImageSet3</span> <span class="k">=</span> <span class="nc">ImageSet</span><span class="o">.</span><span class="n">array</span><span class="o">(</span><span class="n">array</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Create DistributedImageSet, assume there is an image file “/tmp/test.jpg”
+and an image folder</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">com.intel.analytics.bigdl.transform.vision.image.ImageFeature</span>
+<span class="k">import</span> <span class="nn">com.intel.analytics.zoo.feature.image.ImageSet</span>
+<span class="k">import</span> <span class="nn">org.apache.spark.SparkContext</span>
+<span class="k">import</span> <span class="nn">org.apache.spark.sql.SQLContext</span>
+
+<span class="k">val</span> <span class="n">conf</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">SparkConf</span><span class="o">().</span><span class="n">setAppName</span><span class="o">(</span><span class="s">&quot;ImageSpec&quot;</span><span class="o">).</span><span class="n">setMaster</span><span class="o">(</span><span class="s">&quot;local[2]&quot;</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">sc</span> <span class="k">=</span> <span class="nc">NNContext</span><span class="o">.</span><span class="n">initNNContext</span><span class="o">(</span><span class="n">conf</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">sqlContext</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">SQLContext</span><span class="o">(</span><span class="n">sc</span><span class="o">)</span>
+
+<span class="c1">// create DistributedImageSet from an image</span>
+<span class="k">val</span> <span class="n">distributedImageSet</span> <span class="k">=</span> <span class="nc">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="o">(</span><span class="s">&quot;/tmp/test.jpg&quot;</span><span class="o">,</span> <span class="n">sc</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>
+
+<span class="c1">// create DistributedImageSet from an image folder</span>
+<span class="k">val</span> <span class="n">distributedImageSet2</span> <span class="k">=</span> <span class="nc">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="o">(</span><span class="s">&quot;/tmp/image/&quot;</span><span class="o">,</span> <span class="n">sc</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>
+
+<span class="c1">// create DistributedImageSet from rdd of ImageFeature</span>
+<span class="k">val</span> <span class="n">array</span> <span class="k">=</span> <span class="nc">Array</span><span class="o">[</span><span class="kt">ImageFeature</span><span class="o">]()</span>
+<span class="k">val</span> <span class="n">rdd</span> <span class="k">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="o">(</span><span class="n">array</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">distributedImageSet3</span> <span class="k">=</span> <span class="nc">ImageSet</span><span class="o">.</span><span class="n">rdd</span><span class="o">(</span><span class="n">rdd</span><span class="o">)</span>
+</pre></div>
+</div>
+<p><strong>Python example:</strong></p>
+<p>Create LocalImageSet</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bigdl.util.common</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.feature.image.imageset</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># create LocalImageSet from an image</span>
+<span class="n">local_image_set</span> <span class="o">=</span> <span class="n">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;/tmp/test.jpg&quot;</span><span class="p">)</span>
+
+<span class="c1"># create LocalImageSet from an image folder</span>
+<span class="n">local_image_set2</span> <span class="o">=</span> <span class="n">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;/tmp/image/&quot;</span><span class="p">)</span>
+
+<span class="c1"># create LocalImageSet from list of images</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;/tmp/test.jpg&quot;</span><span class="p">)</span>
+<span class="n">local_image_set3</span> <span class="o">=</span> <span class="n">LocalImageSet</span><span class="p">([</span><span class="n">image</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Create DistributedImageSet</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.common.nncontext</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.feature.image.imageset</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">sc</span> <span class="o">=</span> <span class="n">init_nncontext</span><span class="p">(</span><span class="n">init_spark_conf</span><span class="p">()</span><span class="o">.</span><span class="n">setMaster</span><span class="p">(</span><span class="s2">&quot;local[2]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setAppName</span><span class="p">(</span><span class="s2">&quot;test image&quot;</span><span class="p">))</span>
+<span class="c1"># create DistributedImageSet from an image</span>
+<span class="n">distributed_image_set</span> <span class="o">=</span> <span class="n">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;/tmp/test.jpg&quot;</span><span class="p">,</span> <span class="n">sc</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># create DistributedImageSet from an image folder</span>
+<span class="n">distributed_image_set</span> <span class="o">=</span> <span class="n">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;/tmp/image/&quot;</span><span class="p">,</span> <span class="n">sc</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># create DistributedImageSet from image rdd</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;/tmp/test.jpg&quot;</span><span class="p">)</span>
+<span class="n">image_rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">([</span><span class="n">image</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">distributed_image_set</span> <span class="o">=</span> <span class="n">DistributedImageSet</span><span class="p">(</span><span class="n">image_rdd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

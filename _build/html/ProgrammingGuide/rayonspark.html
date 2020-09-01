@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; analytics-zoo  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="System Requirement" href="pytorch.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> analytics-zoo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PythonAPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.automl.html">zoo.automl package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.common.html">zoo.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.examples.html">zoo.examples package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.feature.html">zoo.feature package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.models.html">zoo.models package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.orca.html">zoo.orca package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.pipeline.html">zoo.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.ray.html">zoo.ray package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.tfpark.html">zoo.tfpark package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.util.html">zoo.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.zouwu.html">zoo.zouwu package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html">Launch an Analytics Zoo Docker Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#run-analytics-zoo-jupyter-notebook-example-in-a-container">Run Analytics Zoo Jupyter Notebook example in a container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#create-a-new-analytics-zoo-jupyter-notebook-example">Create a new Analytics Zoo Jupyter Notebook example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#shut-down-the-analytics-zoo-docker-container">Shut Down the Analytics Zoo Docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#build-a-customized-analytics-zoo-docker-image">Build a customized Analytics Zoo Docker image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#pre-installed-packages">Pre-installed Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html"><strong>Install the latest nightly build wheels for pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-local-usage"><strong>Install from pip for local usage</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-yarn-cluster"><strong>Install from pip for Yarn cluster</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-without-pip"><strong>Install without pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html"><strong>Run after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-on-yarn-after-pip-install"><strong>Run on Yarn after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-without-pip-install"><strong>Run without pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#example-code"><strong>Example code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html"><strong>Download Analytics Zoo Source Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#build-whl-package-for-pip-install"><strong>Build whl package for pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#run-in-ide"><strong>Run in IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html"><strong>Download a pre-built library</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-release-version"><strong>Link with a release version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-development-version"><strong>Link with a development version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#download-analytics-zoo-source"><strong>Download Analytics Zoo Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-build-environment"><strong>Setup Build Environment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-script-recommended"><strong>Build with script (Recommended)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-spark-1-6"><strong>Build for Spark 1.6</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-scala-2-10-or-2-11"><strong>Build for Scala 2.10 or 2.11</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-maven"><strong>Build with Maven</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-ide"><strong>Setup IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html"><strong>Set Environment Variables</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#use-interactive-spark-shell"><strong>Use Interactive Spark Shell</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#run-as-a-spark-program"><strong>Run as a Spark Program</strong></a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#examples">Examples:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#primary-apis">Primary APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autograd.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferlearning.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html"><strong>Load and predict with pre-trained model</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html#examples"><strong>Examples</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html">System Requirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#pytorch-api">Pytorch API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#examples">Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#steps-to-run-rayonspark"><strong>Steps to run RayOnSpark</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">analytics-zoo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><strong>Introduction</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ProgrammingGuide/rayonspark.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <hr class="docutils" />
+<div class="section" id="introduction">
+<h1><strong>Introduction</strong><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/ray-project/ray">Ray</a> is a distributed framework for emerging AI applications open-sourced by <a class="reference external" href="https://rise.cs.berkeley.edu">UC Berkeley RISELab</a>.
+It implements a unified interface, distributed scheduler, and distributed and fault-tolerant store to address the new and demanding systems requirements for advanced AI technologies.</p>
+<p>Ray allows users to easily and efficiently to run many emerging AI applications, such as deep reinforcement learning using RLlib, scalable hyperparameter search using Ray Tune, automatic program synthesis using AutoPandas, etc.</p>
+<p>Analytics Zoo provides a mechanism to deploy Python dependencies and Ray services automatically
+across yarn cluster, meaning python users would be able to run <code class="docutils literal notranslate"><span class="pre">analytics-zoo</span></code> or <code class="docutils literal notranslate"><span class="pre">ray</span></code>
+in a pythonic way on yarn without <code class="docutils literal notranslate"><span class="pre">spark-submit</span></code> or installing analytics-zoo or ray across all cluster nodes.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="steps-to-run-rayonspark">
+<h1><strong>Steps to run RayOnSpark</strong><a class="headerlink" href="#steps-to-run-rayonspark" title="Permalink to this headline">¶</a></h1>
+<p><strong>NOTE:</strong> We have been tested on Ray 0.8.4 and you are highly recommended to use this Ray version.</p>
+<ol class="simple">
+<li>Install <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/commands/install.html">Conda</a> in your environment.</li>
+<li>Create a new conda environment (with name “zoo” for example):</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">zoo</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span>
+<span class="n">source</span> <span class="n">activate</span> <span class="n">zoo</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>Install analytics-zoo in the created conda environment:</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">analytics</span><span class="o">-</span><span class="n">zoo</span><span class="p">[</span><span class="n">ray</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Note that the essential dependencies (including <code class="docutils literal notranslate"><span class="pre">ray==0.8.4</span></code>, <code class="docutils literal notranslate"><span class="pre">psutil</span></code>, <code class="docutils literal notranslate"><span class="pre">aiohttp</span></code>, <code class="docutils literal notranslate"><span class="pre">setproctitle</span></code>, <code class="docutils literal notranslate"><span class="pre">pyarrow==0.17.0</span></code>) will be installed by specifying the extras key <code class="docutils literal notranslate"><span class="pre">[ray]</span></code> when you pip install analytics-zoo.</p>
+<ol class="simple">
+<li>Download JDK8 and set the environment variable: JAVA_HOME (recommended).</li>
+</ol>
+<p>You can also install JDK via conda without setting the JAVA_HOME manually:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">anaconda</span> <span class="pre">openjdk=8.0.152</span></code></p>
+<ol class="simple">
+<li>Start <code class="docutils literal notranslate"><span class="pre">python</span></code> and then execute the following example.</li>
+</ol>
+<ul class="simple">
+<li>Create a SparkContext on yarn, only <strong>yarn-client mode</strong> is supported for now:</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo</span> <span class="kn">import</span> <span class="n">init_spark_on_yarn</span>
+
+<span class="n">sc</span> <span class="o">=</span> <span class="n">init_spark_on_yarn</span><span class="p">(</span>
+    <span class="n">hadoop_conf</span><span class="o">=</span><span class="s2">&quot;path to the yarn configuration folder&quot;</span><span class="p">,</span>
+    <span class="n">conda_name</span><span class="o">=</span><span class="s2">&quot;zoo&quot;</span><span class="p">,</span> <span class="c1"># The name of the created conda-env</span>
+    <span class="n">num_executor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">executor_cores</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">executor_memory</span><span class="o">=</span><span class="s2">&quot;8g&quot;</span><span class="p">,</span>
+    <span class="n">driver_memory</span><span class="o">=</span><span class="s2">&quot;2g&quot;</span><span class="p">,</span>
+    <span class="n">driver_cores</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">extra_executor_memory_for_ray</span><span class="o">=</span><span class="s2">&quot;10g&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[Optional] If you don’t have a yarn cluster, this can also be tested locally by creating a SparkContext
+with <code class="docutils literal notranslate"><span class="pre">init_spark_on_local</span></code>:</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo</span> <span class="kn">import</span> <span class="n">init_spark_on_local</span>
+
+<span class="n">sc</span> <span class="o">=</span> <span class="n">init_spark_on_local</span><span class="p">(</span><span class="n">cores</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Once the SparkContext is created, we can write more logic here such as training an Analytics Zoo model
+or launching ray on Spark.</li>
+<li>Run the following simple example to launch a ray cluster on top of the SparkContext configurations and verify if RayOnSpark can work smoothly.</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ray</span>
+<span class="kn">from</span> <span class="nn">zoo.ray</span> <span class="kn">import</span> <span class="n">RayContext</span>
+
+<span class="n">ray_ctx</span> <span class="o">=</span> <span class="n">RayContext</span><span class="p">(</span><span class="n">sc</span><span class="o">=</span><span class="n">sc</span><span class="p">,</span> <span class="n">object_store_memory</span><span class="o">=</span><span class="s2">&quot;5g&quot;</span><span class="p">)</span>
+<span class="n">ray_ctx</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+<span class="nd">@ray</span><span class="o">.</span><span class="n">remote</span>
+<span class="k">class</span> <span class="nc">Counter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+      <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+
+      <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+          <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
+
+
+<span class="n">counters</span> <span class="o">=</span> <span class="p">[</span><span class="n">Counter</span><span class="o">.</span><span class="n">remote</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ray</span><span class="o">.</span><span class="n">get</span><span class="p">([</span><span class="n">c</span><span class="o">.</span><span class="n">increment</span><span class="o">.</span><span class="n">remote</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">counters</span><span class="p">]))</span>
+
+<span class="n">ray_ctx</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="pytorch.html" class="btn btn-neutral float-left" title="System Requirement" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

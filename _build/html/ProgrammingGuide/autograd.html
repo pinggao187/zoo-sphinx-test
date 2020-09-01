@@ -1,0 +1,404 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview &mdash; analytics-zoo  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Overview" href="transferlearning.html" />
+    <link rel="prev" title="Overview" href="nnframes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> analytics-zoo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PythonAPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.automl.html">zoo.automl package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.common.html">zoo.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.examples.html">zoo.examples package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.feature.html">zoo.feature package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.models.html">zoo.models package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.orca.html">zoo.orca package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.pipeline.html">zoo.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.ray.html">zoo.ray package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.tfpark.html">zoo.tfpark package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.util.html">zoo.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.zouwu.html">zoo.zouwu package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html">Launch an Analytics Zoo Docker Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#run-analytics-zoo-jupyter-notebook-example-in-a-container">Run Analytics Zoo Jupyter Notebook example in a container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#create-a-new-analytics-zoo-jupyter-notebook-example">Create a new Analytics Zoo Jupyter Notebook example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#shut-down-the-analytics-zoo-docker-container">Shut Down the Analytics Zoo Docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#build-a-customized-analytics-zoo-docker-image">Build a customized Analytics Zoo Docker image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#pre-installed-packages">Pre-installed Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html"><strong>Install the latest nightly build wheels for pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-local-usage"><strong>Install from pip for local usage</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-yarn-cluster"><strong>Install from pip for Yarn cluster</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-without-pip"><strong>Install without pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html"><strong>Run after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-on-yarn-after-pip-install"><strong>Run on Yarn after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-without-pip-install"><strong>Run without pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#example-code"><strong>Example code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html"><strong>Download Analytics Zoo Source Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#build-whl-package-for-pip-install"><strong>Build whl package for pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#run-in-ide"><strong>Run in IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html"><strong>Download a pre-built library</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-release-version"><strong>Link with a release version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-development-version"><strong>Link with a development version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#download-analytics-zoo-source"><strong>Download Analytics Zoo Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-build-environment"><strong>Setup Build Environment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-script-recommended"><strong>Build with script (Recommended)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-spark-1-6"><strong>Build for Spark 1.6</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-scala-2-10-or-2-11"><strong>Build for Scala 2.10 or 2.11</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-maven"><strong>Build with Maven</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-ide"><strong>Setup IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html"><strong>Set Environment Variables</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#use-interactive-spark-shell"><strong>Use Interactive Spark Shell</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#run-as-a-spark-program"><strong>Run as a Spark Program</strong></a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#examples">Examples:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#primary-apis">Primary APIs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#customloss">CustomLoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lambda-layer">Lambda layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#construct-variable-computation-without-lambda-layer">Construct variable computation without <code class="docutils literal notranslate"><span class="pre">Lambda</span></code> layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#define-a-model-using-trainable-parameter">Define a model using trainable Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="transferlearning.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html"><strong>Load and predict with pre-trained model</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html#examples"><strong>Examples</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html">System Requirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#pytorch-api">Pytorch API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html#steps-to-run-rayonspark"><strong>Steps to run RayOnSpark</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">analytics-zoo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ProgrammingGuide/autograd.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">autograd</span></code> provides automatic differentiation for math operations, so that you can easily build your own <em>custom loss and layer</em> (in both Python and Scala), as illustracted below. (See more examples <a class="reference external" href="https://github.com/intel-analytics/analytics-zoo/tree/master/pyzoo/zoo/examples/autograd">here</a>). Conceptually we use reverse mode together with the chain rule for automatic differentiation. <code class="docutils literal notranslate"><span class="pre">Variable</span></code> is used to record the linkage of the operation history, which would generated a static directed acyclic graph for the backward execution. Within the execution graph, leaves are the input <code class="docutils literal notranslate"><span class="pre">variables</span></code> and roots are the output <code class="docutils literal notranslate"><span class="pre">variables</span></code>.</p>
+<div class="section" id="customloss">
+<h2>CustomLoss<a class="headerlink" href="#customloss" title="Permalink to this headline">¶</a></h2>
+<p>1.Define a custom function using <code class="docutils literal notranslate"><span class="pre">autograd</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.pipeline.api.autograd</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">mean_absolute_error</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+   <span class="k">return</span> <span class="n">mean</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y_true</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>Use <code class="docutils literal notranslate"><span class="pre">CustomLoss</span></code> in <code class="docutils literal notranslate"><span class="pre">compile</span></code> method.</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can pass the loss function directly into `loss`</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">SGD</span><span class="p">(),</span> <span class="n">loss</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>Use <code class="docutils literal notranslate"><span class="pre">CustomLoss</span></code> in <code class="docutils literal notranslate"><span class="pre">nnframe</span></code> pipeline.</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1) Create a CustomLoss object from function.</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">CustomLoss</span><span class="p">(</span><span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">y_pred_shape</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">y_true_shape</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1"># 2) Passing the CustomLoss object to NNClassifier.</span>
+<span class="n">classifier</span> <span class="o">=</span> <span class="n">NNClassifier</span><span class="p">(</span><span class="n">lrModel</span><span class="p">,</span> <span class="n">loss</span><span class="p">,</span> <span class="n">SeqToTensor</span><span class="p">([</span><span class="mi">1000</span><span class="p">]))</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>Use <code class="docutils literal notranslate"><span class="pre">forward</span></code> and <code class="docutils literal notranslate"><span class="pre">backward</span></code> to evaluate a <code class="docutils literal notranslate"><span class="pre">CustomLoss</span></code> for debugging.</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># y_pred_shape=[2] is a shape without batch</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">CustomLoss</span><span class="p">(</span><span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">y_pred_shape</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">y_true_shape</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">error</span> <span class="o">=</span> <span class="n">loss</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]),</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="n">grad</span> <span class="o">=</span> <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]),</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lambda-layer">
+<h2>Lambda layer<a class="headerlink" href="#lambda-layer" title="Permalink to this headline">¶</a></h2>
+<p>1.Define custom function using <code class="docutils literal notranslate"><span class="pre">autograd</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.pipeline.api.autograd</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">def</span> <span class="nf">add_one_func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+   <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">1.0</span>
+</pre></div>
+</div>
+<p>2.Define model using Keras-style API and <em>custom <code class="docutils literal notranslate"><span class="pre">Lambda</span></code> layer</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.pipeline.api.keras.layers</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.keras.models</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,)))</span> \
+                   <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">function</span><span class="o">=</span><span class="n">add_one_func</span><span class="p">))</span>
+<span class="c1"># Evaluation for debug purpose.</span>
+<span class="n">model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span> <span class="c1"># 3 is the batch size</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="construct-variable-computation-without-lambda-layer">
+<h2>Construct variable computation without <code class="docutils literal notranslate"><span class="pre">Lambda</span></code> layer<a class="headerlink" href="#construct-variable-computation-without-lambda-layer" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The returning type for each operation is a <code class="docutils literal notranslate"><span class="pre">Variable</span></code>, so you can connect those <code class="docutils literal notranslate"><span class="pre">Variable</span></code> together freely without using <code class="docutils literal notranslate"><span class="pre">Lambda</span></code>. i.e <code class="docutils literal notranslate"><span class="pre">Dense[Float](3).from(input2)</span></code> or <code class="docutils literal notranslate"><span class="pre">input1</span> <span class="pre">+</span> <span class="pre">input2</span></code></li>
+<li>Shape inference is supported as well, which means you can check the output shape of a <code class="docutils literal notranslate"><span class="pre">Variable</span></code> by calling <code class="docutils literal notranslate"><span class="pre">get_output_shape()</span></code></li>
+</ul>
+<p>Python</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">zoo.pipeline.api.autograd</span> <span class="k">as</span> <span class="nn">auto</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.keras.layers</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.keras.models</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="nb">input</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span> <span class="c1"># create a variable</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">TimeDistributed</span><span class="p">(</span><span class="n">layer</span><span class="o">=</span><span class="n">Dense</span><span class="p">(</span><span class="mi">30</span><span class="p">))(</span><span class="nb">input</span><span class="p">)</span> <span class="c1"># time is a variable</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">index_select</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># t1 is a variable</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">index_select</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">diff</span> <span class="o">=</span> <span class="n">auto</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">t1</span> <span class="o">-</span> <span class="n">t2</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">diff</span><span class="o">.</span><span class="n">get_output_shape</span><span class="p">()</span> <span class="o">==</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">diff</span><span class="o">.</span><span class="n">get_input_shape</span><span class="p">()</span> <span class="o">==</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">diff</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Scala</p>
+<ul class="simple">
+<li>In respect of backward compatibility, the scala API is slightly different with the python API.</li>
+<li><code class="docutils literal notranslate"><span class="pre">layer.inputs(node)</span></code> would return a node(backward compatibility).</li>
+<li><code class="docutils literal notranslate"><span class="pre">layer.from(variable)</span></code> would return a variable.(You may want to use this style as it can support autograd.)</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import com.intel.analytics.zoo.pipeline.api.autograd.Variable
+import com.intel.analytics.zoo.pipeline.api.autograd.AutoGrad
+import com.intel.analytics.zoo.pipeline.api.keras.models.Model
+import com.intel.analytics.zoo.pipeline.api.keras.layers._
+
+val input1 = Variable[Float](inputShape = Shape(3))
+val input2 = Variable[Float](inputShape = Shape(3))
+val diff = AutoGrad.abs(input1 - Dense[Float](3).from(input2))
+val model = Model[Float](input = Array(input1, input2), output = diff)
+val inputValue = Tensor[Float](1, 3).randn()
+// In scala, we use Table for multiple inputs. `T` is a short-cut for creating a Table.
+val out = model.forward(T(inputValue, inputValue)).toTensor[Float]
+</pre></div>
+</div>
+</div>
+<div class="section" id="define-a-model-using-trainable-parameter">
+<h2>Define a model using trainable Parameter<a class="headerlink" href="#define-a-model-using-trainable-parameter" title="Permalink to this headline">¶</a></h2>
+<p>Build a <code class="docutils literal notranslate"><span class="pre">Linear</span></code> Model (Wx + b) by using trainable <code class="docutils literal notranslate"><span class="pre">Parameter</span></code> which is equivalent to use <code class="docutils literal notranslate"><span class="pre">Dense</span></code> layer.</p>
+<ul class="simple">
+<li>Scala</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.intel.analytics.zoo.pipeline.api.autograd.</span><span class="p">{</span><span class="n">AutoGrad</span><span class="p">,</span> <span class="n">Parameter</span><span class="p">,</span> <span class="n">Variable</span><span class="p">}</span>
+<span class="kn">import</span> <span class="nn">com.intel.analytics.zoo.pipeline.api.keras.models.Model</span>
+<span class="n">val</span> <span class="nb">input</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">[</span><span class="n">Float</span><span class="p">](</span><span class="n">Shape</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">val</span> <span class="n">w</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">[</span><span class="n">Float</span><span class="p">](</span><span class="n">Shape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="o">//</span> <span class="n">outputSize</span> <span class="o">*</span> <span class="n">inputSize</span>
+<span class="n">val</span> <span class="n">bias</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">[</span><span class="n">Float</span><span class="p">](</span><span class="n">Shape</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">val</span> <span class="n">cDense</span> <span class="o">=</span> <span class="n">AutoGrad</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">List</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="n">bias</span>
+<span class="n">val</span> <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">[</span><span class="n">Float</span><span class="p">](</span><span class="nb">input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="n">cDense</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Python</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.pipeline.api.autograd</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.keras.models</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="nb">input</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">((</span><span class="mi">3</span><span class="p">,))</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="c1"># outputSize * inputSize</span>
+<span class="n">bias</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">((</span><span class="mi">2</span><span class="p">,))</span>
+<span class="n">cDense</span> <span class="o">=</span> <span class="n">mm</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="n">bias</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="nb">input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="n">cDense</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="transferlearning.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nnframes.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

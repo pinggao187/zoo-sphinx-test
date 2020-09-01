@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TFDataset &mdash; analytics-zoo  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> analytics-zoo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PythonAPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../zoo.automl.html">zoo.automl package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zoo.common.html">zoo.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zoo.examples.html">zoo.examples package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zoo.feature.html">zoo.feature package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zoo.models.html">zoo.models package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zoo.orca.html">zoo.orca package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zoo.pipeline.html">zoo.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zoo.ray.html">zoo.ray package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zoo.tfpark.html">zoo.tfpark package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zoo.util.html">zoo.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zoo.zouwu.html">zoo.zouwu package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../DockerUserGuide/index.html">Launch an Analytics Zoo Docker Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DockerUserGuide/index.html#run-analytics-zoo-jupyter-notebook-example-in-a-container">Run Analytics Zoo Jupyter Notebook example in a container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DockerUserGuide/index.html#create-a-new-analytics-zoo-jupyter-notebook-example">Create a new Analytics Zoo Jupyter Notebook example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DockerUserGuide/index.html#shut-down-the-analytics-zoo-docker-container">Shut Down the Analytics Zoo Docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DockerUserGuide/index.html#build-a-customized-analytics-zoo-docker-image">Build a customized Analytics Zoo Docker image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DockerUserGuide/index.html#pre-installed-packages">Pre-installed Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PythonUserGuide/install.html"><strong>Install the latest nightly build wheels for pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PythonUserGuide/install.html#install-from-pip-for-local-usage"><strong>Install from pip for local usage</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PythonUserGuide/install.html#install-from-pip-for-yarn-cluster"><strong>Install from pip for Yarn cluster</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PythonUserGuide/install.html#install-without-pip"><strong>Install without pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PythonUserGuide/run.html"><strong>Run after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PythonUserGuide/run.html#run-on-yarn-after-pip-install"><strong>Run on Yarn after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PythonUserGuide/run.html#run-without-pip-install"><strong>Run without pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PythonUserGuide/run.html#example-code"><strong>Example code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DeveloperGuide/python.html"><strong>Download Analytics Zoo Source Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DeveloperGuide/python.html#build-whl-package-for-pip-install"><strong>Build whl package for pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DeveloperGuide/python.html#run-in-ide"><strong>Run in IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/install.html"><strong>Download a pre-built library</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/install.html#link-with-a-release-version"><strong>Link with a release version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/install.html#link-with-a-development-version"><strong>Link with a development version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/install.html#download-analytics-zoo-source"><strong>Download Analytics Zoo Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/install.html#setup-build-environment"><strong>Setup Build Environment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/install.html#build-with-script-recommended"><strong>Build with script (Recommended)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/install.html#build-for-spark-1-6"><strong>Build for Spark 1.6</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/install.html#build-for-scala-2-10-or-2-11"><strong>Build for Scala 2.10 or 2.11</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/install.html#build-with-maven"><strong>Build with Maven</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/install.html#setup-ide"><strong>Setup IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/run.html"><strong>Set Environment Variables</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/run.html#use-interactive-spark-shell"><strong>Use Interactive Spark Shell</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ScalaUserGuide/run.html#run-as-a-spark-program"><strong>Run as a Spark Program</strong></a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../nnframes.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nnframes.html#examples">Examples:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nnframes.html#primary-apis">Primary APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autograd.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../transferlearning.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inference.html"><strong>Load and predict with pre-trained model</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inference.html#examples"><strong>Examples</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pytorch.html">System Requirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pytorch.html#pytorch-api">Pytorch API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pytorch.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rayonspark.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rayonspark.html#steps-to-run-rayonspark"><strong>Steps to run RayOnSpark</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">analytics-zoo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>TFDataset</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/ProgrammingGuide/TFPark/how-to-import-data.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tfdataset">
+<h1>TFDataset<a class="headerlink" href="#tfdataset" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p><strong>TFDatasets</strong> is the main entrance point in TFPark for importing and manipulating data.
+It represents a distributed collection of elements (backed by a RDD) to be fed into a
+TensorFlow graph for training, evaluation or inference. It provides a rich set of tools
+to import data from various data sources and work as a unified interface to interact with
+other components of TFPark.</p>
+<p>This guide will walk you through some common cases of importing data and you can find detailed description
+of TFDataset’s API in <a class="reference external" href="../../APIGuide/TFPark/tf-dataset">Analytics-Zoo API Guide</a>.</p>
+</div>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">TFDataset</span></code>’s job is to take in dataset, distribute the data across the Spark cluster and transform each data
+record into the format that is compatible with TFPark.</p>
+<p>Here are a few common features that every TFDataset share:</p>
+<ol class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">TFDataset</span></code> will automatically stack consecutive records into batches. The <code class="docutils literal notranslate"><span class="pre">batch_size</span></code> argument (for training)
+or <code class="docutils literal notranslate"><span class="pre">batch_per_thread</span></code> argument (for inference or evaluation) should be set when creating TFDataset.
+The <code class="docutils literal notranslate"><span class="pre">batch_size</span></code> here is used for training and it means the total batch size in distributed training.
+In other words, it equals to the total number of records processed in one iteration in the
+whole cluster. <code class="docutils literal notranslate"><span class="pre">batch_size</span></code> should be a multiple of the total number of cores that is allocated for this Spark application
+so that we can distributed the workload evenly across the cluster. You may need to adjust your other training
+hyper-parameters when <code class="docutils literal notranslate"><span class="pre">batch_size</span></code> is changed. <code class="docutils literal notranslate"><span class="pre">batch_per_thread</span></code> is used for inference or evaluation
+and it means the number of records process in one iteration in one partition. <code class="docutils literal notranslate"><span class="pre">batch_per_thread</span></code> is argument for tuning
+performance and it does not affect the correctness or accuracy of the prediction or evaluation. Too small <code class="docutils literal notranslate"><span class="pre">batch_per_thread</span></code>
+might slow down the prediction/evaluation.</li>
+<li>For training, <code class="docutils literal notranslate"><span class="pre">TFDataset</span></code> can optionally takes a validation data source for validation at the the end of each epoch.
+The validation data source should has the same structure of the main data source used for training.</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">zoo.tfpark</span> <span class="kn">import</span> <span class="n">TFDataset</span>
+<span class="n">feature_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">label_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,))</span>
+<span class="n">val_feature_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">val_label_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,))</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">TFDataset</span><span class="o">.</span><span class="n">from_ndarrays</span><span class="p">((</span><span class="n">feature_data</span><span class="p">,</span> <span class="n">label_data</span><span class="p">),</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">val_tensors</span><span class="o">=</span><span class="p">(</span><span class="n">val_feature_data</span><span class="p">,</span> <span class="n">val_label_data</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="working-with-in-memory-ndarray">
+<h2>Working with in-memory ndarray<a class="headerlink" href="#working-with-in-memory-ndarray" title="Permalink to this headline">¶</a></h2>
+<p>If your input data is quite small, the simplest way to create <code class="docutils literal notranslate"><span class="pre">TFDataset</span></code> to convert them to ndarrays and use
+<code class="docutils literal notranslate"><span class="pre">TFDataset.from_ndarrays()</span></code></p>
+<p>E.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">zoo.tfpark</span> <span class="kn">import</span> <span class="n">TFDataset</span>
+<span class="n">feature_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">label_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,))</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">TFDataset</span><span class="o">.</span><span class="n">from_ndarrays</span><span class="p">((</span><span class="n">feature_data</span><span class="p">,</span> <span class="n">label_data</span><span class="p">),</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="working-with-data-files-including-csv-files-text-files-and-tfrecord-files">
+<h2>Working with data files including (csv files, text files and TFRecord files)<a class="headerlink" href="#working-with-data-files-including-csv-files-text-files-and-tfrecord-files" title="Permalink to this headline">¶</a></h2>
+<p>TFDataset support reading the records in tf.data.Dataset, so you can use tf.data.Dataset to read and process your data
+files and pass it to TFDataset. TFDataset will automatically ship the dataset to different Spark executors, shard the
+data and batch the records for further consumption.</p>
+<p>If you data files is already in HDFS, you should configure you dataset with the path with the following pattern
+<code class="docutils literal notranslate"><span class="pre">&quot;hdfs://namenode:port/path/to/file.txt&quot;</span></code> and TFDataset will directly access that file in HDFS in each executor.
+<code class="docutils literal notranslate"><span class="pre">HDFS_HDFS_HOME</span></code> environment may needs to be set to the location where hadoop is installed for both Spark driver
+and Spark executor. More information on the environment variable can be found <a class="reference external" href="https://github.com/tensorflow/examples/blob/master/community/en/docs/deploy/hadoop">here</a>.</p>
+<p>If you data files are in local file system, you can either upload it to a HDFS cluster and use the above approach or
+copy all the data files on each executor in exact the same location.</p>
+<p>More information on <code class="docutils literal notranslate"><span class="pre">tf.data.Dataset</span></code> can be found <a class="reference external" href="https://www.tensorflow.org/guide/data">here</a>.</p>
+<p>E.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">TextLineDataset</span><span class="p">(</span><span class="s2">&quot;hdfs://path/to/data.csv&quot;</span><span class="p">)</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">line</span><span class="p">:</span> <span class="n">tf</span><span class="o">.</span><span class="n">parse_csv</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">COLUMNS</span><span class="p">))</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">lamdda</span> <span class="n">data</span><span class="p">:</span> <span class="n">extract_features_labels</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">TFDataset</span><span class="o">.</span><span class="n">from_tf_data_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="working-with-analytics-zoo-feature-engineering-tools">
+<h2>Working with Analytics Zoo Feature Engineering tools<a class="headerlink" href="#working-with-analytics-zoo-feature-engineering-tools" title="Permalink to this headline">¶</a></h2>
+<p>Analytics Zoo provides a rich set of tools to build complex data engineering pipelines on top Spark, including
+<code class="docutils literal notranslate"><span class="pre">ImageSet</span></code>, <code class="docutils literal notranslate"><span class="pre">TextSet</span></code> and <code class="docutils literal notranslate"><span class="pre">FeatureSet</span></code>. TFPark also support using those tools for manipulating data. Specifically,
+you can use <code class="docutils literal notranslate"><span class="pre">TFDataset.from_image_set</span></code>, <code class="docutils literal notranslate"><span class="pre">TFDataset.from_text_set</span></code> and <code class="docutils literal notranslate"><span class="pre">TFDataset.from_feature_set</span></code> for importing
+data pipeline written in those tools. Details for these api can be found in <a class="reference external" href="../../APIGuide/TFPark/tf-dataset">Analytics-Zoo API Guide</a>.
+More information on Analytics Zoo’s Feature Engineering tools can be found <a class="reference external" href="../../APIGuide/FeatureEngineering/featureset">here</a>.</p>
+</div>
+<div class="section" id="working-with-rdd-or-spark-dataframe-data">
+<h2>Working with RDD or Spark DataFrame data<a class="headerlink" href="#working-with-rdd-or-spark-dataframe-data" title="Permalink to this headline">¶</a></h2>
+<p>If the about approach does not match your use cases, you can always transform your data into RDD or DataFrame using
+Spark’s data processing capability.</p>
+<p>For rdd, we assume each record contains a tuple of numpy.ndarrays or a tuple of list/dict of numpy.ndarrays. The first
+element of the tuple, will be interpreted as feature and the second (optional) will be interpreted as label. Each record
+should has the same structure. Details for these api can be found in <a class="reference external" href="../../APIGuide/TFPark/tf-dataset">Analytics-Zoo API Guide</a>.</p>
+<p>e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">image_rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">labels_rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,)))</span>
+<span class="n">rdd</span> <span class="o">=</span> <span class="n">image_rdd</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="n">labels_rdd</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">TFDataset</span><span class="o">.</span><span class="n">from_rdd</span><span class="p">(</span><span class="n">rdd</span><span class="p">,</span>
+                             <span class="n">features</span><span class="o">=</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">[</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span>
+                             <span class="n">labels</span><span class="o">=</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[]),</span>
+                             <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For dataframe, you should which columns are features and which columns are labels (optional). And currently only numerical
+types and vectors are supported. Details for these api can be found in <a class="reference external" href="../../APIGuide/TFPark/tf-dataset">Analytics-Zoo API Guide</a>.</p>
+<p>e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rdd</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sc</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">rdd</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">DenseVector</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">)),</span>
+                                <span class="n">x</span> <span class="o">%</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">toDF</span><span class="p">([</span><span class="s2">&quot;feature&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="p">])</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">TFDataset</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">train_df</span><span class="p">,</span>
+                                   <span class="n">feature_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;feature&quot;</span><span class="p">],</span>
+                                   <span class="n">labels_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">],</span>
+                                   <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

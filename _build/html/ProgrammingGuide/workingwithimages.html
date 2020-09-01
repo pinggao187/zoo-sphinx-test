@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Load Image &mdash; analytics-zoo  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> analytics-zoo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PythonAPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.automl.html">zoo.automl package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.common.html">zoo.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.examples.html">zoo.examples package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.feature.html">zoo.feature package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.models.html">zoo.models package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.orca.html">zoo.orca package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.pipeline.html">zoo.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.ray.html">zoo.ray package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.tfpark.html">zoo.tfpark package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.util.html">zoo.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.zouwu.html">zoo.zouwu package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html">Launch an Analytics Zoo Docker Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#run-analytics-zoo-jupyter-notebook-example-in-a-container">Run Analytics Zoo Jupyter Notebook example in a container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#create-a-new-analytics-zoo-jupyter-notebook-example">Create a new Analytics Zoo Jupyter Notebook example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#shut-down-the-analytics-zoo-docker-container">Shut Down the Analytics Zoo Docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#build-a-customized-analytics-zoo-docker-image">Build a customized Analytics Zoo Docker image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#pre-installed-packages">Pre-installed Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html"><strong>Install the latest nightly build wheels for pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-local-usage"><strong>Install from pip for local usage</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-yarn-cluster"><strong>Install from pip for Yarn cluster</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-without-pip"><strong>Install without pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html"><strong>Run after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-on-yarn-after-pip-install"><strong>Run on Yarn after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-without-pip-install"><strong>Run without pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#example-code"><strong>Example code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html"><strong>Download Analytics Zoo Source Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#build-whl-package-for-pip-install"><strong>Build whl package for pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#run-in-ide"><strong>Run in IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html"><strong>Download a pre-built library</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-release-version"><strong>Link with a release version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-development-version"><strong>Link with a development version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#download-analytics-zoo-source"><strong>Download Analytics Zoo Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-build-environment"><strong>Setup Build Environment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-script-recommended"><strong>Build with script (Recommended)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-spark-1-6"><strong>Build for Spark 1.6</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-scala-2-10-or-2-11"><strong>Build for Scala 2.10 or 2.11</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-maven"><strong>Build with Maven</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-ide"><strong>Setup IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html"><strong>Set Environment Variables</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#use-interactive-spark-shell"><strong>Use Interactive Spark Shell</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#run-as-a-spark-program"><strong>Run as a Spark Program</strong></a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#examples">Examples:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#primary-apis">Primary APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autograd.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferlearning.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html"><strong>Load and predict with pre-trained model</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html#examples"><strong>Examples</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html">System Requirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#pytorch-api">Pytorch API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html#steps-to-run-rayonspark"><strong>Steps to run RayOnSpark</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">analytics-zoo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Load Image</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ProgrammingGuide/workingwithimages.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Analytics Zoo provides supports for end-to-end image processing pipeline, including image loading, pre-processing, inference/training and some utilities on different formats.</p>
+<div class="section" id="load-image">
+<h1>Load Image<a class="headerlink" href="#load-image" title="Permalink to this headline">¶</a></h1>
+<p>Analytics Zoo provides APIs to read image to different formats:</p>
+<div class="section" id="load-to-data-frame">
+<h2>Load to Data Frame<a class="headerlink" href="#load-to-data-frame" title="Permalink to this headline">¶</a></h2>
+<p>Analytics Zoo can process image data as Spark Data Frame.
+<code class="docutils literal notranslate"><span class="pre">NNImageReader</span></code> is the primary DataFrame-based image loading interface to read images into DataFrame.</p>
+<p>Scala example:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">com.intel.analytics.zoo.common.NNContext</span>
+<span class="k">import</span> <span class="nn">com.intel.analytics.zoo.pipeline.nnframes.NNImageReader</span>
+
+<span class="k">val</span> <span class="n">sc</span> <span class="k">=</span> <span class="nc">NNContext</span><span class="o">.</span><span class="n">initNNContext</span><span class="o">(</span><span class="s">&quot;app&quot;</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">imageDF1</span> <span class="k">=</span> <span class="nc">NNImageReader</span><span class="o">.</span><span class="n">readImages</span><span class="o">(</span><span class="s">&quot;/tmp&quot;</span><span class="o">,</span> <span class="n">sc</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">imageDF2</span> <span class="k">=</span> <span class="nc">NNImageReader</span><span class="o">.</span><span class="n">readImages</span><span class="o">(</span><span class="s">&quot;/tmp/*.jpg&quot;</span><span class="o">,</span> <span class="n">sc</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">imageDF3</span> <span class="k">=</span> <span class="nc">NNImageReader</span><span class="o">.</span><span class="n">readImages</span><span class="o">(</span><span class="s">&quot;/tmp/a.jpg, /tmp/b.jpg&quot;</span><span class="o">,</span> <span class="n">sc</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.common.nncontext</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.nnframes</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">sc</span> <span class="o">=</span> <span class="n">init_nncontext</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">imageDF1</span> <span class="o">=</span> <span class="n">NNImageReader</span><span class="o">.</span><span class="n">readImages</span><span class="p">(</span><span class="s2">&quot;/tmp&quot;</span><span class="p">,</span> <span class="n">sc</span><span class="p">)</span>
+<span class="n">imageDF2</span> <span class="o">=</span> <span class="n">NNImageReader</span><span class="o">.</span><span class="n">readImages</span><span class="p">(</span><span class="s2">&quot;/tmp/*.jpg&quot;</span><span class="p">,</span> <span class="n">sc</span><span class="p">)</span>
+<span class="n">imageDF3</span> <span class="o">=</span> <span class="n">NNImageReader</span><span class="o">.</span><span class="n">readImages</span><span class="p">(</span><span class="s2">&quot;/tmp/a.jpg, /tmp/b.jpg&quot;</span><span class="p">,</span> <span class="n">sc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The output DataFrame contains a sinlge column named “image”. The schema of “image” column can be
+accessed from <code class="docutils literal notranslate"><span class="pre">com.intel.analytics.zoo.pipeline.nnframes.DLImageSchema.byteSchema</span></code>.
+Each record in “image” column represents one image record, in the format of
+Row(origin, height, width, num of channels, mode, data), where origin contains the URI for the image file,
+and <code class="docutils literal notranslate"><span class="pre">data</span></code> holds the original file bytes for the image file. <code class="docutils literal notranslate"><span class="pre">mode</span></code> represents the OpenCV-compatible
+type: CV_8UC3, CV_8UC1 in most cases.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span>  <span class="k">val</span> <span class="n">byteSchema</span> <span class="k">=</span> <span class="nc">StructType</span><span class="o">(</span>
+    <span class="nc">StructField</span><span class="o">(</span><span class="s">&quot;origin&quot;</span><span class="o">,</span> <span class="nc">StringType</span><span class="o">,</span> <span class="kc">true</span><span class="o">)</span> <span class="o">::</span>
+      <span class="nc">StructField</span><span class="o">(</span><span class="s">&quot;height&quot;</span><span class="o">,</span> <span class="nc">IntegerType</span><span class="o">,</span> <span class="kc">false</span><span class="o">)</span> <span class="o">::</span>
+      <span class="nc">StructField</span><span class="o">(</span><span class="s">&quot;width&quot;</span><span class="o">,</span> <span class="nc">IntegerType</span><span class="o">,</span> <span class="kc">false</span><span class="o">)</span> <span class="o">::</span>
+      <span class="nc">StructField</span><span class="o">(</span><span class="s">&quot;nChannels&quot;</span><span class="o">,</span> <span class="nc">IntegerType</span><span class="o">,</span> <span class="kc">false</span><span class="o">)</span> <span class="o">::</span>
+      <span class="c1">// OpenCV-compatible type: CV_8UC3, CV_32FC3 in most cases</span>
+      <span class="nc">StructField</span><span class="o">(</span><span class="s">&quot;mode&quot;</span><span class="o">,</span> <span class="nc">IntegerType</span><span class="o">,</span> <span class="kc">false</span><span class="o">)</span> <span class="o">::</span>
+      <span class="c1">// Bytes in OpenCV-compatible order: row-wise BGR in most cases</span>
+      <span class="nc">StructField</span><span class="o">(</span><span class="s">&quot;data&quot;</span><span class="o">,</span> <span class="nc">BinaryType</span><span class="o">,</span> <span class="kc">false</span><span class="o">)</span> <span class="o">::</span> <span class="nc">Nil</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>After loading the image, user can compose the preprocess steps with the <code class="docutils literal notranslate"><span class="pre">Preprocessing</span></code> defined
+in <code class="docutils literal notranslate"><span class="pre">com.intel.analytics.zoo.feature.image</span></code>.</p>
+</div>
+<div class="section" id="load-to-imageset">
+<h2>Load to ImageSet<a class="headerlink" href="#load-to-imageset" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ImageSet</span></code> is a collection of <code class="docutils literal notranslate"><span class="pre">ImageFeature</span></code>. It can be a <code class="docutils literal notranslate"><span class="pre">DistributedImageSet</span></code> for distributed image RDD or
+<code class="docutils literal notranslate"><span class="pre">LocalImageSet</span></code> for local image array.
+You can read image data as <code class="docutils literal notranslate"><span class="pre">ImageSet</span></code> from local/distributed image path, or you can directly construct a ImageSet from RDD[ImageFeature] or Array[ImageFeature].</p>
+<p><strong>Scala example:</strong></p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// create LocalImageSet from an image folder</span>
+<span class="k">val</span> <span class="n">localImageSet</span> <span class="k">=</span> <span class="nc">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="o">(</span><span class="s">&quot;/tmp/image/&quot;</span><span class="o">)</span>
+
+<span class="c1">// create DistributedImageSet from an image folder</span>
+<span class="k">val</span> <span class="n">distributedImageSet2</span> <span class="k">=</span> <span class="nc">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="o">(</span><span class="s">&quot;/tmp/image/&quot;</span><span class="o">,</span> <span class="n">sc</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>
+</pre></div>
+</div>
+<p><strong>Python example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># create LocalImageSet from an image folder</span>
+<span class="n">local_image_frame2</span> <span class="o">=</span> <span class="n">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;/tmp/image/&quot;</span><span class="p">)</span>
+
+<span class="c1"># create DistributedImageSet from an image folder</span>
+<span class="n">distributed_image_frame</span> <span class="o">=</span> <span class="n">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;/tmp/image/&quot;</span><span class="p">,</span> <span class="n">sc</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="image-transformer">
+<h1>Image Transformer<a class="headerlink" href="#image-transformer" title="Permalink to this headline">¶</a></h1>
+<p>Analytics Zoo has many pre-defined image processing transformers built on top of OpenCV:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">ImageBrightness</span></code>: Adjust the image brightness.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageHue</span></code>: Adjust the image hue.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageSaturation</span></code>: Adjust the image Saturation.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageContrast</span></code>: Adjust the image Contrast.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageChannelOrder</span></code>: Random change the channel order of an image</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageColorJitter</span></code>: Random adjust brightness, contrast, hue, saturation</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageResize</span></code>: Resize image</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageAspectScale</span></code>: Resize the image, keep the aspect ratio. scale according to the short edge</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageRandomAspectScale</span></code>: Resize the image by randomly choosing a scale</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageChannelNormalize</span></code>: Image channel normalize</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImagePixelNormalizer</span></code>: Pixel level normalizer</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageCenterCrop</span></code>: Crop a <code class="docutils literal notranslate"><span class="pre">cropWidth</span></code> x <code class="docutils literal notranslate"><span class="pre">cropHeight</span></code> patch from center of image.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageRandomCrop</span></code>: Random crop a <code class="docutils literal notranslate"><span class="pre">cropWidth</span></code> x <code class="docutils literal notranslate"><span class="pre">cropHeight</span></code> patch from an image.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageFixedCrop</span></code>: Crop a fixed area of image</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageDetectionCrop</span></code>: Crop from object detections, each image should has a tensor detection,</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageExpand</span></code>: Expand image, fill the blank part with the meanR, meanG, meanB</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageFiller</span></code>: Fill part of image with certain pixel value</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageHFlip</span></code>: Flip the image horizontally</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageRandomPreprocessing</span></code>: It is a wrapper for transformers to control the transform probability</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageBytesToMat</span></code>: Transform byte array(original image file in byte) to OpenCVMat</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageMatToFloats</span></code>: Transform OpenCVMat to float array, note that in this transformer, the mat is released.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageMatToTensor</span></code>: Transform opencv mat to tensor, note that in this transformer, the mat is released.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageSetToSample</span></code>: Transforms tensors that map inputKeys and targetKeys to sample, note that in this transformer, the mat has been released.</li>
+</ul>
+<p>More examples can be found <a class="reference external" href="../APIGuide/FeatureEngineering/image">here</a></p>
+<p>You can also define your own Transformer by extending <code class="docutils literal notranslate"><span class="pre">ImageProcessing</span></code>,
+and override the function <code class="docutils literal notranslate"><span class="pre">transformMat</span></code> to do the actual transformation to <code class="docutils literal notranslate"><span class="pre">ImageFeature</span></code>.</p>
+</div>
+<div class="section" id="build-image-transformation-pipeline">
+<h1><strong>Build Image Transformation Pipeline</strong><a class="headerlink" href="#build-image-transformation-pipeline" title="Permalink to this headline">¶</a></h1>
+<p>You can easily build the image transformation pipeline by chaining transformers.</p>
+<p><strong>Scala example:</strong></p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">com.intel.analytics.bigdl.numeric.NumericFloat</span>
+<span class="k">import</span> <span class="nn">com.intel.analytics.zoo.feature.image._</span>
+
+
+<span class="k">val</span> <span class="n">imgAug</span> <span class="k">=</span> <span class="nc">ImageBytesToMat</span><span class="o">()</span> <span class="o">-&gt;</span> <span class="nc">ImageResize</span><span class="o">(</span><span class="mi">256</span><span class="o">,</span> <span class="mi">256</span><span class="o">)-&gt;</span> <span class="nc">ImageCenterCrop</span><span class="o">(</span><span class="mi">224</span><span class="o">,</span> <span class="mi">224</span><span class="o">)</span> <span class="o">-&gt;</span>
+             <span class="nc">ImageChannelNormalize</span><span class="o">(</span><span class="mi">123</span><span class="o">,</span> <span class="mi">117</span><span class="o">,</span> <span class="mi">104</span><span class="o">)</span> <span class="o">-&gt;</span>
+             <span class="nc">ImageMatToTensor</span><span class="o">[</span><span class="kt">Float</span><span class="o">]()</span> <span class="o">-&gt;</span>
+             <span class="nc">ImageSetToSample</span><span class="o">[</span><span class="kt">Float</span><span class="o">]()</span>
+</pre></div>
+</div>
+<p>In the above example, the transformations will perform sequentially.</p>
+<p>Assume you have an ImageSet containing original bytes array,</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">ImageBytesToMat</span></code> will transform the bytes array to <code class="docutils literal notranslate"><span class="pre">OpenCVMat</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageColorJitter</span></code>, <code class="docutils literal notranslate"><span class="pre">ImageExpand</span></code>, <code class="docutils literal notranslate"><span class="pre">ImageResize</span></code>, <code class="docutils literal notranslate"><span class="pre">ImageHFlip</span></code> and <code class="docutils literal notranslate"><span class="pre">ImageChannelNormalize</span></code> will transform over <code class="docutils literal notranslate"><span class="pre">OpenCVMat</span></code>,
+note that <code class="docutils literal notranslate"><span class="pre">OpenCVMat</span></code> is overwrite by default.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageMatToTensor</span></code> transform <code class="docutils literal notranslate"><span class="pre">OpenCVMat</span></code> to <code class="docutils literal notranslate"><span class="pre">Tensor</span></code>, and <code class="docutils literal notranslate"><span class="pre">OpenCVMat</span></code> is released in this step.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ImageSetToSample</span></code> transform the tensors that map inputKeys and targetKeys to sample,
+which can be used by the following prediction or training tasks.</li>
+</ul>
+<p><strong>Python example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.feature.image.imagePreprocessing</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.feature.common</span> <span class="kn">import</span> <span class="n">ChainedPreprocessing</span>
+
+<span class="n">img_aug</span> <span class="o">=</span> <span class="n">ChainedPreprocessing</span><span class="p">([</span><span class="n">ImageBytesToMat</span><span class="p">(),</span>
+      <span class="n">ImageColorJitter</span><span class="p">(),</span>
+      <span class="n">ImageExpand</span><span class="p">(),</span>
+      <span class="n">ImageResize</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+      <span class="n">ImageHFlip</span><span class="p">(),</span>
+      <span class="n">ImageChannelNormalize</span><span class="p">(</span><span class="mf">123.0</span><span class="p">,</span> <span class="mf">117.0</span><span class="p">,</span> <span class="mf">104.0</span><span class="p">),</span>
+      <span class="n">ImageMatToTensor</span><span class="p">(),</span>
+      <span class="n">ImageSetToSample</span><span class="p">()])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="image-train">
+<h1><strong>Image Train</strong><a class="headerlink" href="#image-train" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="train-with-image-dataframe">
+<h2>Train with Image DataFrame<a class="headerlink" href="#train-with-image-dataframe" title="Permalink to this headline">¶</a></h2>
+<p>You can use NNEstimator/NNCLassifier to train Zoo Keras/BigDL model with Image DataFrame. You can pass in image preprocessing to NNEstimator/NNClassifier to do image preprocessing before training. Then call <code class="docutils literal notranslate"><span class="pre">fit</span></code> method to let Analytics Zoo train the model</p>
+<p>For detail APIs, please refer to: <a class="reference external" href="../APIGuide/PipelineAPI/nnframes">NNFrames</a></p>
+<p><strong>Scala example:</strong></p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">batchsize</span> <span class="k">=</span> <span class="mi">128</span>
+<span class="k">val</span> <span class="n">nEpochs</span> <span class="k">=</span> <span class="mi">10</span>
+<span class="k">val</span> <span class="n">featureTransformer</span> <span class="k">=</span> <span class="nc">RowToImageFeature</span><span class="o">()</span> <span class="o">-&gt;</span> <span class="nc">ImageResize</span><span class="o">(</span><span class="mi">256</span><span class="o">,</span> <span class="mi">256</span><span class="o">)</span> <span class="o">-&gt;</span>
+                                   <span class="nc">ImageCenterCrop</span><span class="o">(</span><span class="mi">224</span><span class="o">,</span> <span class="mi">224</span><span class="o">)</span> <span class="o">-&gt;</span>
+                                   <span class="nc">ImageChannelNormalize</span><span class="o">(</span><span class="mi">123</span><span class="o">,</span> <span class="mi">117</span><span class="o">,</span> <span class="mi">104</span><span class="o">)</span> <span class="o">-&gt;</span>
+                                   <span class="nc">ImageMatToTensor</span><span class="o">()</span> <span class="o">-&gt;</span>
+                                   <span class="nc">ImageFeatureToTensor</span><span class="o">()</span>
+<span class="k">val</span> <span class="n">classifier</span> <span class="k">=</span> <span class="nc">NNClassifier</span><span class="o">(</span><span class="n">model</span><span class="o">,</span> <span class="nc">CrossEntropyCriterion</span><span class="o">[</span><span class="kt">Float</span><span class="o">](),</span> <span class="n">featureTransformer</span><span class="o">)</span>
+        <span class="o">.</span><span class="n">setFeaturesCol</span><span class="o">(</span><span class="s">&quot;image&quot;</span><span class="o">)</span>
+        <span class="o">.</span><span class="n">setLearningRate</span><span class="o">(</span><span class="mf">0.003</span><span class="o">)</span>
+        <span class="o">.</span><span class="n">setBatchSize</span><span class="o">(</span><span class="n">batchsize</span><span class="o">)</span>
+        <span class="o">.</span><span class="n">setMaxEpoch</span><span class="o">(</span><span class="n">nEpochs</span><span class="o">)</span>
+        <span class="o">.</span><span class="n">setValidation</span><span class="o">(</span><span class="nc">Trigger</span><span class="o">.</span><span class="n">everyEpoch</span><span class="o">,</span> <span class="n">valDf</span><span class="o">,</span> <span class="nc">Array</span><span class="o">(</span><span class="k">new</span> <span class="nc">Top1Accuracy</span><span class="o">()),</span> <span class="n">batchsize</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">trainedModel</span> <span class="k">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="o">(</span><span class="n">trainDf</span><span class="o">)</span>
+</pre></div>
+</div>
+<p><strong>Python example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">batchsize</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">nEpochs</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">featureTransformer</span> <span class="o">=</span> <span class="n">ChainedPreprocessing</span><span class="p">([</span><span class="n">RowToImageFeature</span><span class="p">(),</span> <span class="n">ImageResize</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span>
+                                   <span class="n">ImageCenterCrop</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">),</span>
+                                   <span class="n">ImageChannelNormalize</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">104</span><span class="p">),</span>
+                                   <span class="n">ImageMatToTensor</span><span class="p">(),</span>
+                                   <span class="n">ImageFeatureToTensor</span><span class="p">()])</span>
+<span class="n">classifier</span> <span class="o">=</span> <span class="n">NNClassifier</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">CrossEntropyCriterion</span><span class="p">(),</span> <span class="n">featureTransformer</span><span class="p">)</span>\
+        <span class="o">.</span><span class="n">setFeaturesCol</span><span class="p">(</span><span class="s2">&quot;image&quot;</span><span class="p">)</span>\
+        <span class="o">.</span><span class="n">setLearningRate</span><span class="p">(</span><span class="mf">0.003</span><span class="p">)</span>\
+        <span class="o">.</span><span class="n">setBatchSize</span><span class="p">(</span><span class="n">batchsize</span><span class="p">)</span>\
+        <span class="o">.</span><span class="n">setMaxEpoch</span><span class="p">(</span><span class="n">nEpochs</span><span class="p">)</span>\
+        <span class="o">.</span><span class="n">setValidation</span><span class="p">(</span><span class="n">EveryEpoch</span><span class="p">(),</span> <span class="n">valDf</span><span class="p">,</span> <span class="p">[</span><span class="n">Top1Accuracy</span><span class="p">()],</span> <span class="n">batch_size</span><span class="p">)</span>
+<span class="n">trainedModel</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trainDf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="train-with-imageset">
+<h2>Train with ImageSet<a class="headerlink" href="#train-with-imageset" title="Permalink to this headline">¶</a></h2>
+<p>You can train Zoo Keras model with ImageSet. Just call <code class="docutils literal notranslate"><span class="pre">fit</span></code> method to let Analytics Zoo train the model.</p>
+<p><strong>Python example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.common.nncontext</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.feature.common</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.feature.image.imagePreprocessing</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Flatten</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.keras.models</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.net</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">bigdl.optim.optimizer</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">sc</span> <span class="o">=</span> <span class="n">init_nncontext</span><span class="p">(</span><span class="s2">&quot;train keras&quot;</span><span class="p">)</span>
+<span class="n">img_path</span><span class="o">=</span><span class="s2">&quot;/tmp/image&quot;</span>
+<span class="n">image_set</span> <span class="o">=</span> <span class="n">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">img_path</span><span class="p">,</span><span class="n">sc</span><span class="p">,</span> <span class="n">min_partitions</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">transformer</span> <span class="o">=</span> <span class="n">ChainedPreprocessing</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">ImageResize</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="n">ImageCenterCrop</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">),</span>
+         <span class="n">ImageChannelNormalize</span><span class="p">(</span><span class="mf">123.0</span><span class="p">,</span> <span class="mf">117.0</span><span class="p">,</span> <span class="mf">104.0</span><span class="p">),</span> <span class="n">ImageMatToTensor</span><span class="p">(),</span>
+         <span class="n">ImageSetToSample</span><span class="p">()])</span>
+<span class="n">image_data</span> <span class="o">=</span> <span class="n">transformer</span><span class="p">(</span><span class="n">image_set</span><span class="p">)</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">label_rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">image_data</span><span class="o">.</span><span class="n">get_image</span><span class="p">()</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="n">label_rdd</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="nb">tuple</span><span class="p">:</span> <span class="n">Sample</span><span class="o">.</span><span class="n">from_ndarray</span><span class="p">(</span><span class="nb">tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="c1"># create model</span>
+<span class="n">model_path</span><span class="o">=</span><span class="s2">&quot;/tmp/bigdl_inception-v1_imagenet_0.4.0.model&quot;</span>
+<span class="n">full_model</span> <span class="o">=</span> <span class="n">Net</span><span class="o">.</span><span class="n">load_bigdl</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="c1"># create a new model by remove layers after pool5/drop_7x7_s1</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">full_model</span><span class="o">.</span><span class="n">new_graph</span><span class="p">([</span><span class="s2">&quot;pool5/drop_7x7_s1&quot;</span><span class="p">])</span>
+<span class="c1"># freeze layers from input to pool4/3x3_s2 inclusive</span>
+<span class="n">model</span><span class="o">.</span><span class="n">freeze_up_to</span><span class="p">([</span><span class="s2">&quot;pool4/3x3_s2&quot;</span><span class="p">])</span>
+
+<span class="n">inputNode</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">))</span>
+<span class="n">inception</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to_keras</span><span class="p">()(</span><span class="n">inputNode</span><span class="p">)</span>
+<span class="n">flatten</span> <span class="o">=</span> <span class="n">Flatten</span><span class="p">()(</span><span class="n">inception</span><span class="p">)</span>
+<span class="n">logits</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="n">flatten</span><span class="p">)</span>
+<span class="n">lrModel</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputNode</span><span class="p">,</span> <span class="n">logits</span><span class="p">)</span>
+
+<span class="n">batchsize</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">nEpochs</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">lrModel</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">Adam</span><span class="p">(</span><span class="n">learningrate</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">),</span>
+                  <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span>
+                  <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+<span class="n">lrModel</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">samples</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batchsize</span><span class="p">,</span> <span class="n">nb_epoch</span><span class="o">=</span><span class="n">nEpochs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="image-predict">
+<h1><strong>Image Predict</strong><a class="headerlink" href="#image-predict" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="predict-with-image-dataframe">
+<h2>Predict with Image DataFrame<a class="headerlink" href="#predict-with-image-dataframe" title="Permalink to this headline">¶</a></h2>
+<p>After training with <em>NNEstimator/NNCLassifier</em>, you’ll get a trained <em>NNModel/NNClassifierModel</em> . You can call <code class="docutils literal notranslate"><span class="pre">transform</span></code> to predict Image DataFrame with this <em>NNModel/NNClassifierModel</em> . Or you can load pre-trained <em>Analytics-Zoo/BigDL/Caffe/Torch/Tensorflow</em>  model and create <em>NNModel/NNClassifierModel</em> with this model. Then call to <code class="docutils literal notranslate"><span class="pre">transform</span></code> to Image DataFrame.</p>
+<p>After prediction, there is a new column <code class="docutils literal notranslate"><span class="pre">prediction</span></code> in the prediction image dataframe.</p>
+<p><strong>Scala example:</strong></p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span> <span class="k">val</span> <span class="n">batchsize</span> <span class="k">=</span> <span class="mi">128</span>
+ <span class="k">val</span> <span class="n">nEpochs</span> <span class="k">=</span> <span class="mi">10</span>
+ <span class="k">val</span> <span class="n">featureTransformer</span> <span class="k">=</span> <span class="nc">RowToImageFeature</span><span class="o">()</span> <span class="o">-&gt;</span> <span class="nc">ImageResize</span><span class="o">(</span><span class="mi">256</span><span class="o">,</span> <span class="mi">256</span><span class="o">)</span> <span class="o">-&gt;</span>
+                                    <span class="nc">ImageCenterCrop</span><span class="o">(</span><span class="mi">224</span><span class="o">,</span> <span class="mi">224</span><span class="o">)</span> <span class="o">-&gt;</span>
+                                    <span class="nc">ImageChannelNormalize</span><span class="o">(</span><span class="mi">123</span><span class="o">,</span> <span class="mi">117</span><span class="o">,</span> <span class="mi">104</span><span class="o">)</span> <span class="o">-&gt;</span>
+                                    <span class="nc">ImageMatToTensor</span><span class="o">()</span> <span class="o">-&gt;</span>
+                                    <span class="nc">ImageFeatureToTensor</span><span class="o">()</span>
+ <span class="k">val</span> <span class="n">classifier</span> <span class="k">=</span> <span class="nc">NNClassifier</span><span class="o">(</span><span class="n">model</span><span class="o">,</span> <span class="nc">CrossEntropyCriterion</span><span class="o">[</span><span class="kt">Float</span><span class="o">](),</span> <span class="n">featureTransformer</span><span class="o">)</span>
+         <span class="o">.</span><span class="n">setFeaturesCol</span><span class="o">(</span><span class="s">&quot;image&quot;</span><span class="o">)</span>
+         <span class="o">.</span><span class="n">setLearningRate</span><span class="o">(</span><span class="mf">0.003</span><span class="o">)</span>
+         <span class="o">.</span><span class="n">setBatchSize</span><span class="o">(</span><span class="n">batchsize</span><span class="o">)</span>
+         <span class="o">.</span><span class="n">setMaxEpoch</span><span class="o">(</span><span class="n">nEpochs</span><span class="o">)</span>
+         <span class="o">.</span><span class="n">setValidation</span><span class="o">(</span><span class="nc">Trigger</span><span class="o">.</span><span class="n">everyEpoch</span><span class="o">,</span> <span class="n">valDf</span><span class="o">,</span> <span class="nc">Array</span><span class="o">(</span><span class="k">new</span> <span class="nc">Top1Accuracy</span><span class="o">()),</span> <span class="n">batchsize</span><span class="o">)</span>
+ <span class="k">val</span> <span class="n">trainedModel</span> <span class="k">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="o">(</span><span class="n">trainDf</span><span class="o">)</span>
+ <span class="c1">// predict with trained model</span>
+ <span class="k">val</span> <span class="n">predictions</span> <span class="k">=</span> <span class="n">trainedModel</span><span class="o">.</span><span class="n">transform</span><span class="o">(</span><span class="n">testDf</span><span class="o">)</span>
+ <span class="n">predictions</span><span class="o">.</span><span class="n">select</span><span class="o">(</span><span class="n">col</span><span class="o">(</span><span class="s">&quot;image&quot;</span><span class="o">),</span> <span class="n">col</span><span class="o">(</span><span class="s">&quot;label&quot;</span><span class="o">),</span> <span class="n">col</span><span class="o">(</span><span class="s">&quot;prediction&quot;</span><span class="o">)).</span><span class="n">show</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span>
+ 
+ <span class="c1">// predict with loaded pre-trained model</span>
+ <span class="k">val</span> <span class="n">model</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">.</span><span class="n">loadModule</span><span class="o">[</span><span class="kt">Float</span><span class="o">](</span><span class="n">modelPath</span><span class="o">)</span>
+ <span class="k">val</span> <span class="n">dlmodel</span> <span class="k">=</span> <span class="nc">NNClassifierModel</span><span class="o">(</span><span class="n">model</span><span class="o">,</span> <span class="n">featureTransformer</span><span class="o">)</span>
+         <span class="o">.</span><span class="n">setBatchSize</span><span class="o">(</span><span class="n">batchsize</span><span class="o">)</span>
+         <span class="o">.</span><span class="n">setFeaturesCol</span><span class="o">(</span><span class="s">&quot;image&quot;</span><span class="o">)</span>
+         <span class="o">.</span><span class="n">setPredictionCol</span><span class="o">(</span><span class="s">&quot;prediction&quot;</span><span class="o">)</span> 
+ <span class="k">val</span> <span class="n">resultDF</span> <span class="k">=</span> <span class="n">dlmodel</span><span class="o">.</span><span class="n">transform</span><span class="o">(</span><span class="n">testDf</span><span class="o">)</span>
+</pre></div>
+</div>
+<p><strong>Python example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">batchsize</span> <span class="o">=</span> <span class="mi">128</span>
+ <span class="n">nEpochs</span> <span class="o">=</span> <span class="mi">10</span>
+ <span class="n">featureTransformer</span> <span class="o">=</span> <span class="n">ChainedPreprocessing</span><span class="p">([</span><span class="n">RowToImageFeature</span><span class="p">(),</span> <span class="n">ImageResize</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span>
+                                    <span class="n">ImageCenterCrop</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">),</span>
+                                    <span class="n">ImageChannelNormalize</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">104</span><span class="p">),</span>
+                                    <span class="n">ImageMatToTensor</span><span class="p">(),</span>
+                                    <span class="n">ImageFeatureToTensor</span><span class="p">()])</span>
+ <span class="n">classifier</span> <span class="o">=</span> <span class="n">NNClassifier</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">CrossEntropyCriterion</span><span class="p">(),</span> <span class="n">featureTransformer</span><span class="p">)</span>\
+         <span class="o">.</span><span class="n">setFeaturesCol</span><span class="p">(</span><span class="s2">&quot;image&quot;</span><span class="p">)</span>\
+         <span class="o">.</span><span class="n">setLearningRate</span><span class="p">(</span><span class="mf">0.003</span><span class="p">)</span>\
+         <span class="o">.</span><span class="n">setBatchSize</span><span class="p">(</span><span class="n">batchsize</span><span class="p">)</span>\
+         <span class="o">.</span><span class="n">setMaxEpoch</span><span class="p">(</span><span class="n">nEpochs</span><span class="p">)</span>\
+         <span class="o">.</span><span class="n">setValidation</span><span class="p">(</span><span class="n">EveryEpoch</span><span class="p">(),</span> <span class="n">valDf</span><span class="p">,</span> <span class="p">[</span><span class="n">Top1Accuracy</span><span class="p">()],</span> <span class="n">batch_size</span><span class="p">)</span>
+<span class="n">trainedModel</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trainDf</span><span class="p">)</span>
+<span class="c1"># predict with trained model</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">trainedModel</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">testDf</span><span class="p">)</span>
+<span class="n">predictions</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;image&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="p">,</span><span class="s2">&quot;prediction&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># predict with loaded pre-trained model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">loadModel</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="n">dlmodel</span> <span class="o">=</span> <span class="n">NNClassifierModel</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">featureTransformer</span><span class="p">)</span>\
+         <span class="o">.</span><span class="n">setBatchSize</span><span class="p">(</span><span class="n">batchsize</span><span class="p">)</span>\
+         <span class="o">.</span><span class="n">setFeaturesCol</span><span class="p">(</span><span class="s2">&quot;image&quot;</span><span class="p">)</span>\
+         <span class="o">.</span><span class="n">setPredictionCol</span><span class="p">(</span><span class="s2">&quot;prediction&quot;</span><span class="p">)</span> 
+<span class="n">resultDF</span> <span class="o">=</span> <span class="n">dlmodel</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">testDf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="predict-with-imageset">
+<h2>Predict with ImageSet<a class="headerlink" href="#predict-with-imageset" title="Permalink to this headline">¶</a></h2>
+<p>After training Zoo Keras model, you can call <code class="docutils literal notranslate"><span class="pre">predict</span></code> to predict ImageSet.
+Or you can load pre-trained Analytics-Zoo/BigDL model. Then call to <code class="docutils literal notranslate"><span class="pre">predictImageSet</span></code> to predict ImageSet.</p>
+<div class="section" id="predict-with-trained-zoo-keras-model">
+<h3>Predict with trained Zoo Keras Model<a class="headerlink" href="#predict-with-trained-zoo-keras-model" title="Permalink to this headline">¶</a></h3>
+<p><strong>Python example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.common.nncontext</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.feature.common</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.feature.image.imagePreprocessing</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Flatten</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.keras.models</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">zoo.pipeline.api.net</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">bigdl.optim.optimizer</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">sc</span> <span class="o">=</span> <span class="n">init_nncontext</span><span class="p">(</span><span class="s2">&quot;train keras&quot;</span><span class="p">)</span>
+<span class="n">img_path</span><span class="o">=</span><span class="s2">&quot;/tmp/image&quot;</span>
+<span class="n">image_set</span> <span class="o">=</span> <span class="n">ImageSet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">img_path</span><span class="p">,</span><span class="n">sc</span><span class="p">,</span> <span class="n">min_partitions</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">transformer</span> <span class="o">=</span> <span class="n">ChainedPreprocessing</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">ImageResize</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="n">ImageCenterCrop</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">),</span>
+         <span class="n">ImageChannelNormalize</span><span class="p">(</span><span class="mf">123.0</span><span class="p">,</span> <span class="mf">117.0</span><span class="p">,</span> <span class="mf">104.0</span><span class="p">),</span> <span class="n">ImageMatToTensor</span><span class="p">(),</span>
+         <span class="n">ImageSetToSample</span><span class="p">()])</span>
+<span class="n">image_data</span> <span class="o">=</span> <span class="n">transformer</span><span class="p">(</span><span class="n">image_set</span><span class="p">)</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">label_rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">image_data</span><span class="o">.</span><span class="n">get_image</span><span class="p">()</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="n">label_rdd</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="nb">tuple</span><span class="p">:</span> <span class="n">Sample</span><span class="o">.</span><span class="n">from_ndarray</span><span class="p">(</span><span class="nb">tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="c1"># create model</span>
+<span class="n">model_path</span><span class="o">=</span><span class="s2">&quot;/tmp/bigdl_inception-v1_imagenet_0.4.0.model&quot;</span>
+<span class="n">full_model</span> <span class="o">=</span> <span class="n">Net</span><span class="o">.</span><span class="n">load_bigdl</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="c1"># create a new model by remove layers after pool5/drop_7x7_s1</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">full_model</span><span class="o">.</span><span class="n">new_graph</span><span class="p">([</span><span class="s2">&quot;pool5/drop_7x7_s1&quot;</span><span class="p">])</span>
+<span class="c1"># freeze layers from input to pool4/3x3_s2 inclusive</span>
+<span class="n">model</span><span class="o">.</span><span class="n">freeze_up_to</span><span class="p">([</span><span class="s2">&quot;pool4/3x3_s2&quot;</span><span class="p">])</span>
+
+<span class="n">inputNode</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">))</span>
+<span class="n">inception</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to_keras</span><span class="p">()(</span><span class="n">inputNode</span><span class="p">)</span>
+<span class="n">flatten</span> <span class="o">=</span> <span class="n">Flatten</span><span class="p">()(</span><span class="n">inception</span><span class="p">)</span>
+<span class="n">logits</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="n">flatten</span><span class="p">)</span>
+<span class="n">lrModel</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputNode</span><span class="p">,</span> <span class="n">logits</span><span class="p">)</span>
+
+<span class="n">batchsize</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">nEpochs</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">lrModel</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">Adam</span><span class="p">(</span><span class="n">learningrate</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">),</span>
+                  <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span>
+                  <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+<span class="n">lrModel</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">samples</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batchsize</span><span class="p">,</span> <span class="n">nb_epoch</span><span class="o">=</span><span class="n">nEpochs</span><span class="p">)</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">lrModel</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="predict-with-loaded-model">
+<h3>Predict with loaded Model<a class="headerlink" href="#predict-with-loaded-model" title="Permalink to this headline">¶</a></h3>
+<p>You can load pre-trained Analytics-Zoo/BigDL model. Then call to <code class="docutils literal notranslate"><span class="pre">predictImageSet</span></code> to predict ImageSet.</p>
+<p>For details, you can check guide of <a class="reference internal" href="image-classification.html"><span class="doc">image classificaion</span></a> or <a class="reference internal" href="object-detection.html"><span class="doc">object detection</span></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="d-image-support">
+<h1>3D Image Support<a class="headerlink" href="#d-image-support" title="Permalink to this headline">¶</a></h1>
+<p>For 3D images, we can support above operations based on ImageSet. For details, please refer to <a class="reference external" href="../APIGuide/FeatureEngineering/image">image API guide</a></p>
+</div>
+<div class="section" id="caching-images-in-persistent-memory">
+<h1>Caching Images in Persistent Memory<a class="headerlink" href="#caching-images-in-persistent-memory" title="Permalink to this headline">¶</a></h1>
+<p>Here is a scala <a class="reference external" href="https://github.com/intel-analytics/analytics-zoo/blob/master/zoo/src/main/scala/com/intel/analytics/zoo/examples/inception/README">example</a> to train Inception V1 with ImageNet-2012 dataset. If you set the option <code class="docutils literal notranslate"><span class="pre">memoryType</span></code> to <code class="docutils literal notranslate"><span class="pre">PMEM</span></code>, the data will be cached in Intel Optane DC Persistent Memory; please refer to the guide <a class="reference external" href="https://github.com/memkind/memkind#run-requirements">here</a> on how to set up the system environment.</p>
+<p>In the InceptionV1 example, we use an new dataset called <a class="reference external" href="../APIGuide/FeatureEngineering/featureset">FeatureSet</a> to cache the data. Only scala API is currently available.</p>
+<p><strong>Scala example:</strong></p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">rawData</span> <span class="k">=</span> <span class="n">readFromSeqFiles</span><span class="o">(</span><span class="n">path</span><span class="o">,</span> <span class="n">sc</span><span class="o">,</span> <span class="n">classNumber</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">featureSet</span> <span class="k">=</span> <span class="nc">FeatureSet</span><span class="o">.</span><span class="n">rdd</span><span class="o">(</span><span class="n">rawData</span><span class="o">,</span> <span class="n">memoryType</span> <span class="k">=</span> <span class="nc">PMEM</span><span class="o">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">readFromSeqFiles</span></code> read the Sequence File into <code class="docutils literal notranslate"><span class="pre">RDD[ByteRecord]</span></code>, then <code class="docutils literal notranslate"><span class="pre">FeatureSet.rdd(rawData,</span> <span class="pre">memoryType</span> <span class="pre">=</span> <span class="pre">PMEM)</span></code> will cache the data to Intel Optane DC Persistent Memory.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

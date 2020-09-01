@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Prerequisites &mdash; analytics-zoo  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> analytics-zoo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PythonAPI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.automl.html">zoo.automl package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.common.html">zoo.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.examples.html">zoo.examples package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.feature.html">zoo.feature package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.models.html">zoo.models package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.orca.html">zoo.orca package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.pipeline.html">zoo.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.ray.html">zoo.ray package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.tfpark.html">zoo.tfpark package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.util.html">zoo.util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zoo.zouwu.html">zoo.zouwu package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html">Launch an Analytics Zoo Docker Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#run-analytics-zoo-jupyter-notebook-example-in-a-container">Run Analytics Zoo Jupyter Notebook example in a container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#create-a-new-analytics-zoo-jupyter-notebook-example">Create a new Analytics Zoo Jupyter Notebook example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#shut-down-the-analytics-zoo-docker-container">Shut Down the Analytics Zoo Docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#build-a-customized-analytics-zoo-docker-image">Build a customized Analytics Zoo Docker image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DockerUserGuide/index.html#pre-installed-packages">Pre-installed Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html"><strong>Install the latest nightly build wheels for pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-local-usage"><strong>Install from pip for local usage</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-from-pip-for-yarn-cluster"><strong>Install from pip for Yarn cluster</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/install.html#install-without-pip"><strong>Install without pip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html"><strong>Run after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-on-yarn-after-pip-install"><strong>Run on Yarn after pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#run-without-pip-install"><strong>Run without pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonUserGuide/run.html#example-code"><strong>Example code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html"><strong>Download Analytics Zoo Source Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#build-whl-package-for-pip-install"><strong>Build whl package for pip install</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DeveloperGuide/python.html#run-in-ide"><strong>Run in IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html"><strong>Download a pre-built library</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-release-version"><strong>Link with a release version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#link-with-a-development-version"><strong>Link with a development version</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#download-analytics-zoo-source"><strong>Download Analytics Zoo Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-build-environment"><strong>Setup Build Environment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-script-recommended"><strong>Build with script (Recommended)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-spark-1-6"><strong>Build for Spark 1.6</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-for-scala-2-10-or-2-11"><strong>Build for Scala 2.10 or 2.11</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#build-with-maven"><strong>Build with Maven</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/install.html#setup-ide"><strong>Setup IDE</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html"><strong>Set Environment Variables</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#use-interactive-spark-shell"><strong>Use Interactive Spark Shell</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ScalaUserGuide/run.html#run-as-a-spark-program"><strong>Run as a Spark Program</strong></a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#examples">Examples:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nnframes.html#primary-apis">Primary APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autograd.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferlearning.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html"><strong>Load and predict with pre-trained model</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html#examples"><strong>Examples</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html">System Requirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#pytorch-api">Pytorch API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytorch.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="rayonspark.html#steps-to-run-rayonspark"><strong>Steps to run RayOnSpark</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">analytics-zoo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><strong>Prerequisites</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ProgrammingGuide/AnalyticsZoo-on-Databricks.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Databricks is a fast Apache Spark based big data analysis platform. Analytics Zoo program can run easily on Databricks spark cluster for distributed training or inference. This guide will introduce how to prepare Analytics Zoo environment as well as starting an Analytics Zoo notebook on Databricks.</p>
+<ul class="simple">
+<li><a class="reference external" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference external" href="#installing-analytics-zoo-libraries">Installing Analytics Zoo libraries</a></li>
+<li><a class="reference external" href="#setting-spark-configuration">Setting Spark configuration</a></li>
+<li><a class="reference external" href="#running-analytics-zoo-notebook-on-databricks">Running Analytics Zoo notebook on Databricks</a></li>
+</ul>
+<div class="section" id="prerequisites">
+<h1><strong>Prerequisites</strong><a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h1>
+<p>Before you start this guide, make sure a Databricks workspace is ready and a cluster is created using the Databricks UI.</p>
+<ol class="simple">
+<li>Create either <a class="reference external" href="https://docs.databricks.com/getting-started/try-databricks.html">AWS Databricks</a>  workspace or <a class="reference external" href="https://docs.microsoft.com/en-us/azure/azure-databricks/">Azure Databricks</a> workspace.</li>
+<li>Create Databricks <a class="reference external" href="https://docs.databricks.com/clusters/create.html">clusters</a> using the UI. Choose Databricks runtime version. This guide is tested on Runtime 5.5 LTS (includes Apache Spark 2.4.3, Scala 2.11).</li>
+</ol>
+</div>
+<div class="section" id="installing-analytics-zoo-libraries">
+<h1><strong>Installing Analytics Zoo libraries</strong><a class="headerlink" href="#installing-analytics-zoo-libraries" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li>Install libraries. Right-click the Workspace folder. Select <strong>Create &gt; Library</strong>.</li>
+</ol>
+<p><img alt="Pic1" src="ProgrammingGuide/../Image/PlatformGuide/create-library.png" /></p>
+<ol class="simple">
+<li>Install Analytics Zoo python environment using PyPI.</li>
+</ol>
+<p><img alt="Pic2" src="ProgrammingGuide/../Image/PlatformGuide/analytics-zoo-PyPI.PNG" /></p>
+<ol class="simple">
+<li>Install Analytics Zoo prebuilt jar package. Download Analytics Zoo prebuilt release package from the <a class="reference external" href="https://analytics-zoo.github.io/master/#release-download/">Release Page</a>. Please note that you should choose the same spark version of package as your Databricks runtime version. Unzip it. Find the jar named “analytics-zoo-bigdl_<em>-spark_</em>-jar-with-dependencies.jar” in the lib directory. Drop the jar on Databricks.</li>
+</ol>
+<p><img alt="Pic3" src="ProgrammingGuide/../Image/PlatformGuide/analytics-zoo-jar.PNG" /></p>
+<ol class="simple">
+<li>Make sure the jar file and analytics-zoo installed using PyPI are installed on all clusters. In <strong>Libraries</strong> tab of your cluster, check installed libraries and click “Install automatically on all clusters” option in <strong>Admin Settings</strong>.</li>
+</ol>
+<p><img alt="Pic4" src="ProgrammingGuide/../Image/PlatformGuide/install-on-allclusters.PNG" /></p>
+</div>
+<div class="section" id="setting-spark-configuration">
+<h1><strong>Setting Spark configuration</strong><a class="headerlink" href="#setting-spark-configuration" title="Permalink to this headline">¶</a></h1>
+<p>On the cluster configuration page, click the <strong>Advanced Options</strong> toggle. Click the <strong>Spark</strong> tab. You can provide custom <a class="reference external" href="https://spark.apache.org/docs/latest/configuration.html">Spark configuration properties</a> in a cluster configuration. Please set it according to your cluster resource and program needs.</p>
+<p><img alt="Pic5" src="ProgrammingGuide/../Image/PlatformGuide/spark-config-aws.png" /></p>
+<p>See below for an example of Spark config setting needed by Analytics Zoo. Here it sets 1 core and 6g memory per executor and driver. Note that “spark.cores.max” needs to be properly set below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">shuffle</span><span class="o">.</span><span class="n">reduceLocality</span><span class="o">.</span><span class="n">enabled</span> <span class="n">false</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">serializer</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">spark</span><span class="o">.</span><span class="n">serializer</span><span class="o">.</span><span class="n">JavaSerializer</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">shuffle</span><span class="o">.</span><span class="n">blockTransferService</span> <span class="n">nio</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">databricks</span><span class="o">.</span><span class="n">delta</span><span class="o">.</span><span class="n">preview</span><span class="o">.</span><span class="n">enabled</span> <span class="n">true</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">executor</span><span class="o">.</span><span class="n">cores</span> <span class="mi">1</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">executor</span><span class="o">.</span><span class="n">memory</span> <span class="mi">6</span><span class="n">g</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">speculation</span> <span class="n">false</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">memory</span> <span class="mi">6</span><span class="n">g</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">scheduler</span><span class="o">.</span><span class="n">minRegisteredResourcesRatio</span> <span class="mf">1.0</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">cores</span><span class="o">.</span><span class="n">max</span> <span class="mi">4</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">cores</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-analytics-zoo-notebook-on-databricks">
+<h1><strong>Running Analytics Zoo notebook on Databricks</strong><a class="headerlink" href="#running-analytics-zoo-notebook-on-databricks" title="Permalink to this headline">¶</a></h1>
+<p>Open a new notebook. First call <code class="docutils literal notranslate"><span class="pre">init_nncontext()</span></code> at the beginning of your code. This will create a SparkContext with optimized performance configuration and initialize the BigDL engine.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.common.nncontext</span> <span class="kn">import</span><span class="o">*</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">init_nncontext</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Output on Databricks:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Prepending</span> <span class="o">/</span><span class="n">databricks</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">bigdl</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">spark</span><span class="o">-</span><span class="n">bigdl</span><span class="o">.</span><span class="n">conf</span> <span class="n">to</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span>
+<span class="n">Adding</span> <span class="o">/</span><span class="n">databricks</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">zoo</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">analytics</span><span class="o">-</span><span class="n">zoo</span><span class="o">-</span><span class="n">bigdl_0</span><span class="o">.</span><span class="mf">9.1</span><span class="o">-</span><span class="n">spark_2</span><span class="o">.</span><span class="mf">4.3</span><span class="o">-</span><span class="mf">0.6</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">jar</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">dependencies</span><span class="o">.</span><span class="n">jar</span> <span class="n">to</span> <span class="n">BIGDL_JARS</span>
+<span class="n">Prepending</span> <span class="o">/</span><span class="n">databricks</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">zoo</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">spark</span><span class="o">-</span><span class="n">analytics</span><span class="o">-</span><span class="n">zoo</span><span class="o">.</span><span class="n">conf</span> <span class="n">to</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span>
+</pre></div>
+</div>
+<p>If you would like to run a completed Analytics Zoo notebook, you can import an Analytics Zoo notebook from a URL directly.</p>
+<p><img alt="Pic6" src="ProgrammingGuide/../Image/PlatformGuide/import-notebook.png" /></p>
+<p>For example, you may import a simple <a class="reference external" href="https://github.com/intel-analytics/zoo-tutorials/blob/master/keras/2.1-a-first-look-at-a-neural-network.ipynb">Analytics Zoo tutorials notebook</a>.</p>
+<p><img alt="Pic7" src="ProgrammingGuide/../Image/PlatformGuide/import-zoo-notebook.PNG" /></p>
+<p>Note the above notebook runs on Spark local default; to make it run on Databricks cluster, please change the first Python cell in the notebook to:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoo.common.nncontext</span> <span class="kn">import</span><span class="o">*</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">init_nncontext</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
