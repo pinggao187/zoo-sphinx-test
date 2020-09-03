@@ -1,3 +1,4 @@
+# Docker User Guide
 
 In order to simplify the Analytics Zoo installation and configuration, Analytics Zoo docker images have been built and provided on [Docker Hub](https://hub.docker.com/r/intelanalytics/analytics-zoo). These docker images have been pre-built with all the dependencies and readily configured to run a bunch of Analytics Zoo examples out-of-box on Linux (such as Ubuntu, CentOS), MacOS or Windows. The pre-installed packages are listed at the end of this page. This document provides step-by-step instructions for users to easily start using the Analytics Zoo docker:
 
@@ -13,11 +14,11 @@ In order to simplify the Analytics Zoo installation and configuration, Analytics
 
 ---
 
-## Launch an Analytics Zoo Docker Container
+## Launch Docker Container
 
 A Linux user (CentOS or Ubuntu) can pull a Docker image and launch the Docker container with one command line. 
 
-### 1. Getting Ready
+**1. Getting Ready**
 
 1. Fresh install OS such as Linux OS (CentOS, Ubuntu etc), MacOS or Windows.
 2. Download and Install Docker following the instructions on: 
@@ -65,7 +66,7 @@ Then pull the image. It will be faster.
 sudo docker pull intelanalytics/analytics-zoo:latest
 ```
 
-### 2. Launch Analytics Zoo Docker container
+**2. Launch Docker container**
 
 Launch an Analytics Zoo Docker container with this command line: 
 
@@ -118,11 +119,11 @@ Note: The /opt/work directory contains:
 
 ---
 
-## Run Analytics Zoo Jupyter Notebook example in a container
+## Run Jupyter Notebook example 
 
 This section depends on the previous section [“Launch Analytics Zoo Docker container”](#launch-analytics-zoo-docker-container). After the user launches the Analytics Zoo Docker container, the Jupyter Notebook service can be started and Analytics Zoo Jupyter Notebook examples are available. 
 
-### Start the Jupyter Notebook service in the container
+**Start the Jupyter Notebook service in the container**
 
 After a Docker container is launched and user login to the container, user can start the Jupyter Notebook service inside the container. 
 
@@ -141,7 +142,7 @@ As a result, you will see the output message like below. This means the Jupyter 
 [I 01:04:45.625 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 ```
 
-### Connect to Jupyter Notebook service from a browser
+**Connect to Jupyter Notebook service from a browser**
 
 After the Jupyter Notebook service is successfully started, users can connect to the Jupyter Notebook service from a browser. 
 
@@ -153,7 +154,7 @@ As a result, you will see the Jupyter Notebook like this:
 
 ![notebook1](notebook1.jpg)
 
-### Run Analytics Zoo Jupyter Notebook examples
+**Run Analytics Zoo Jupyter Notebook examples**
 
 After connecting to the Jupyter Notebook in the browser, users can run multiple Analytics Zoo Jupyter Notebook examples. The example shown below is the “dogs-vs-cats”. 
 
@@ -175,17 +176,17 @@ After connecting to the Jupyter Notebook in the browser, users can run multiple 
 
 ---
 
-## Create a new Analytics Zoo Jupyter Notebook example
+## Create Jupyter Notebook example
 
 There are a few ways to quickly start creating a new Analytics Zoo Jupyter Notebook example. Users can “New” a Python notebook from scratch, or use the existing Jupyter Notebook example as an template and modify based on it. 
 
-### “New” a Jupyter Notebook and write Analytics Zoo code from scratch
+**“New” a Jupyter Notebook and write Analytics Zoo code from scratch**
 
 Once the user is connected to the Jupyter Notebook service and opens the address in a browser, the user can instantly click the “New” button and start creating a Python notebook example in the existing Analytics Zoo Jupyter Notebook folder. 
 
 ![notebook6](notebook6.jpg)
 
-### “Make a Copy” from an existing Analytics Zoo Jupyter Notebook example and model after it
+**“Make a Copy” from an existing Analytics Zoo Jupyter Notebook example and model after it**
 
 The user can also select an existing Analytics Zoo Jupyter Notebook example approximating to his own use case, then click "Make a Copy" and start tailing it. 
 
@@ -193,7 +194,7 @@ The user can also select an existing Analytics Zoo Jupyter Notebook example appr
 
 ---
 
-## Shut Down the Analytics Zoo Docker container
+## Stop the  Docker container
 
 Users should shut down the Analytics Zoo Docker container after using it. 
 
@@ -218,7 +219,7 @@ $sudo docker rm -f 40de2cdad025
 
 ---
 
-## Build a customized Analytics Zoo Docker image
+## Customized Docker image
 
 A set of pre-build Analytics Zoo Docker images have been provided on the [Docker Hub](https://hub.docker.com/r/intelanalytics/analytics-zoo/tags?page=1&ordering=last_updated). Users can retrieve these Docker images by  “docker pull” command and specify a tag for which Docker image to download. For example: 
 
