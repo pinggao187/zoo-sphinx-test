@@ -105,7 +105,6 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinxemoji.sphinxemoji',
     'sphinx_copybutton',
-    'versionwarning.extension',
     'sphinx.ext.mathjax',
 ]
 
