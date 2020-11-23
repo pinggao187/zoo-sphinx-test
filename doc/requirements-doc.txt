@@ -5,4 +5,4 @@ ray==0.8.4
 sphinx-copybutton
 sphinx-jsonschema
 sphinx-click
-sphinxemoji=0.1.8
+sphinxemoji==0.1.8
