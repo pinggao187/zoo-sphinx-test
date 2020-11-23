@@ -97,18 +97,6 @@ release = version
 #extensions = [
  #   'sphinx.ext.autodoc',
 #]
-"""
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.mathjax', 'analytics_zoo_pytext']
-extensions += [
-    'sphinx.ext.viewcode',
-    'sphinx.ext.todo',
-    'sphinx_copybutton',
-    'sphinx_click.ext',
-    'sphinx-jsonschema',
-    'sphinx.ext.napoleon',
-    'sphinx_click.ext',
-    'sphinxemoji.sphinxemoji',
-]
 
 """
 extensions = [
@@ -119,7 +107,6 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinxemoji.sphinxemoji',
     'sphinx_copybutton',
-    'versionwarning.extension',
     'sphinx.ext.mathjax',
 ]
 
