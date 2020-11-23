@@ -97,8 +97,6 @@ release = version
 #extensions = [
  #   'sphinx.ext.autodoc',
 #]
-
-"""
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
@@ -107,6 +105,7 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinxemoji.sphinxemoji',
     'sphinx_copybutton',
+    'versionwarning.extension',
     'sphinx.ext.mathjax',
 ]
 
@@ -250,7 +249,4 @@ epub_title = project
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
-
-
-# -- Extension configuration -------------------------------------------------
 
