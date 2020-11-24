@@ -8,6 +8,7 @@ mxnet==1.6.0
 gluonnlp
 featuretools==0.13.4
 xgboost==1.1.1
+onnx==1.6.0
 sphinx-copybutton
 sphinx-jsonschema
 sphinx-click
