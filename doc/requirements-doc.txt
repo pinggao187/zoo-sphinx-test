@@ -2,6 +2,9 @@ tensorflow==1.15.2
 bigdl==0.11.1
 ray[tune]
 ray==0.8.4
+nlp-architect==0.5.4
+bert-tensorflow==1.0.0
+mxnet==1.6.0
 sphinx-copybutton
 sphinx-jsonschema
 sphinx-click
