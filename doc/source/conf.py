@@ -49,10 +49,10 @@ for mod_name in MOCK_MODULES:
 
 
 # -- Project information -----------------------------------------------------
-import sphinx_rtd_theme
-html_theme = "sphinx_rtd_theme"
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-#html_theme = "sphinx_book_theme"
+#import sphinx_rtd_theme
+#html_theme = "sphinx_rtd_theme"
+#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme = "sphinx_book_theme"
 html_theme_options = {
     "repository_url": "https://github.com/intel-analytics/analytics-zoo",
     "use_repository_button": True,
