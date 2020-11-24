@@ -6,3 +6,4 @@ sphinx-copybutton
 sphinx-jsonschema
 sphinx-click
 sphinxemoji==0.1.8
+sphinx_book_theme
