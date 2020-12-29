@@ -24,35 +24,11 @@ sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath("../../pyzoo/"))
 
 
-# These lines added to enable Sphinx to work without installing Ray.
-import mock
-
-class ChildClassMock(mock.MagicMock):
-    @classmethod
-    def __getattr__(cls, name):
-        return mock.Mock
-
-MOCK_MODULES = [
-     "mxnet",
-     "tensorflow",
-     "gluonnlp",
-     "nlp-architect",
-     "bert-tensorflow",
-     "ray",
-     "onnx",
-     "featuretools",
-     "xgboost",
-]
-
-for mod_name in MOCK_MODULES:
-    sys.modules[mod_name] = mock.Mock()
-
-
 # -- Project information -----------------------------------------------------
-#import sphinx_rtd_theme
-#html_theme = "sphinx_rtd_theme"
-#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_theme = "sphinx_book_theme"
+import sphinx_rtd_theme
+html_theme = "sphinx_rtd_theme"
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+#html_theme = "sphinx_book_theme"
 html_theme_options = {
     "repository_url": "https://github.com/intel-analytics/analytics-zoo",
     "use_repository_button": True,

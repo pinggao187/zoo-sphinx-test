@@ -55,6 +55,27 @@ How to use Analytics Zoo?
 .. toctree::
    :hidden:
    :maxdepth: -1
+   :caption: Quick Start
+
+   gettingstarted.md
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: User Guide
+
+   UserGuide/index.rst
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Project Orca
+
+   Orca/index.rst
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
    :caption: Python API
 
    zoo.automl
